@@ -4,6 +4,7 @@ import { schema } from './src/graphql/executableSchema.js';
 import { expressMiddleware } from '@apollo/server/express4';
 import { connectDB } from './src/database/db.js';
 import authMiddleware from './src/middleware/auth.middleware.js';
+import createApiLimiter from './src/middleware/apiLimiter.js';
 import dotenv from 'dotenv';
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
@@ -34,6 +35,7 @@ connectDB();
 	await server.start();
 	app.use(
 		'/graphql',
+		createApiLimiter(),
 		authMiddleware(),
 		expressMiddleware(server, {
 			context: async ({ req }) => {
