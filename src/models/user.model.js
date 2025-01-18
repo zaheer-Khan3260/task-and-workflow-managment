@@ -72,8 +72,8 @@ userSchema.methods.generateAccessToken = function () {
 		{
 			_id: this._id,
 			email: this.email,
-			username: this.username,
-			fullname: this.fullname,
+			name: this.name,
+			role: this.role,
 		},
 		process.env.ACCESS_TOKEN_SECRET,
 		{
@@ -92,42 +92,6 @@ userSchema.methods.generateRefreshToken = function () {
 			expiresIn: process.env.REFRESH_TOKEN_EXPIRY,
 		}
 	);
-};
-
-userSchema.methods.hasPermission = function (action) {
-	const roleHierarchy = {
-		admin: [
-			'create_task',
-			'manage_task',
-			'update_task_status',
-			'update_task',
-			'delete_task',
-			'assign_task',
-			'view_all_task',
-		],
-		project_manager: [
-			'create_task',
-			'manage_task',
-			'update_task_status',
-			'update_task',
-			'delete_task',
-			'assign_task',
-			'view_all_task',
-		],
-		team_lead: [
-			'manage_task',
-			'assign_task',
-			'update_task_status',
-			'view_all_task',
-		],
-		team_member: ['view_their_task', 'update_task_status'],
-	};
-
-	if (roleHierarchy[this.role].includes(action)) {
-		return true;
-	} else {
-		return false;
-	}
 };
 
 export const User = mongoose.model('User', userSchema);
