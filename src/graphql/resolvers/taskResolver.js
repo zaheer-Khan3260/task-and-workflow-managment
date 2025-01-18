@@ -6,13 +6,38 @@ import sanitizeHtml from 'sanitize-html';
 export const taskResolvers = {
 	Query: {
 		// Fetch all tasks
-		tasks: async () => {
+		tasks: async (_, __, context) => {
 			try {
-				const tasks = await Task.find();
-				return tasks.map((task) => ({
-					...task.toObject(),
-					id: task._id.toString(),
-				}));
+				if (!context.user) {
+					throw new ApiError(401, 'Unauthorized: Please log in');
+				}
+
+				const currentUser = await User.findById(context.user._id);
+				if (!currentUser) {
+					throw new ApiError(401, 'User not found');
+				}
+
+				if (currentUser.role === 'team_member') {
+					const tasks = await Task.find({
+						assignedUsers: currentUser._id,
+					});
+					if (tasks.length === 0) {
+						throw new ApiError(
+							404,
+							'No tasks assigned to the current user'
+						);
+					}
+					return tasks.map((task) => ({
+						...task.toObject(),
+						id: task._id.toString(),
+					}));
+				} else {
+					const tasks = await Task.find();
+					return tasks.map((task) => ({
+						...task.toObject(),
+						id: task._id.toString(),
+					}));
+				}
 			} catch (error) {
 				console.error('Error fetching tasks:', error);
 				throw new ApiError(500, 'Failed to fetch tasks');
@@ -43,7 +68,10 @@ export const taskResolvers = {
 				if (!currentUser) {
 					throw new ApiError(401, 'User not found');
 				}
-				if (!currentUser.hasPermission('create_task')) {
+				if (
+					currentUser.role !== 'admin' &&
+					currentUser.role !== 'project_manager'
+				) {
 					throw new ApiError(
 						403,
 						'Forbidden: You do not have permission to create tasks'
@@ -149,7 +177,10 @@ export const taskResolvers = {
 				if (!currentUser) {
 					throw new ApiError(401, 'User not found');
 				}
-				if (!currentUser.hasPermission('update_task')) {
+				if (
+					currentUser.role !== 'admin' &&
+					currentUser.role !== 'project_manager'
+				) {
 					throw new ApiError(
 						403,
 						'Forbidden: You do not have permission to update tasks'
@@ -200,7 +231,11 @@ export const taskResolvers = {
 				if (!currentUser) {
 					throw new ApiError(401, 'User not found');
 				}
-				if (!currentUser.hasPermission('update_task_status')) {
+				if (
+					currentUser.role !== 'admin' &&
+					currentUser.role !== 'project_manager' &&
+					currentUser.role !== 'team_lead'
+				) {
 					throw new ApiError(
 						403,
 						'Forbidden: You do not have permission to update task status'
@@ -246,7 +281,11 @@ export const taskResolvers = {
 				if (!currentUser) {
 					throw new ApiError(401, 'User not found');
 				}
-				if (!currentUser.hasPermission('delete_task')) {
+				if (
+					currentUser.role !== 'admin' &&
+					currentUser.role !== 'project_manager' &&
+					currentUser.role !== 'team_lead'
+				) {
 					throw new ApiError(
 						403,
 						'Forbidden: You do not have permission to delete tasks'
@@ -277,7 +316,11 @@ export const taskResolvers = {
 				if (!currentUser) {
 					throw new ApiError(401, 'User not found');
 				}
-				if (!currentUser.hasPermission('assign_task')) {
+				if (
+					currentUser.role !== 'admin' &&
+					currentUser.role !== 'project_manager' &&
+					currentUser.role !== 'team_lead'
+				) {
 					throw new ApiError(
 						403,
 						'Forbidden: You do not have permission to assign tasks'
@@ -311,7 +354,11 @@ export const taskResolvers = {
 				if (!currentUser) {
 					throw new ApiError(401, 'User not found');
 				}
-				if (!currentUser.hasPermission('manage_task')) {
+				if (
+					currentUser.role !== 'admin' &&
+					currentUser.role !== 'project_manager' &&
+					currentUser.role !== 'team_lead'
+				) {
 					throw new ApiError(
 						403,
 						'Forbidden: You do not have permission to add dependencies'
