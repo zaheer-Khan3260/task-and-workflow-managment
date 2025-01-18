@@ -17,12 +17,11 @@ const authMiddleware = () => {
 		try {
 			const decoded = jwt.verify(token, process.env.JWT_SECRET);
 
-			req.user = decoded;
-
 			const existingUser = await User.findById(decoded._id);
 			if (!existingUser) {
 				throw new ApiError(401, 'Unauthorized: User not found');
 			}
+			req.user = decoded;
 
 			next();
 		} catch (err) {
