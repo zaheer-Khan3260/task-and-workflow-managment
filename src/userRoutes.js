@@ -4,10 +4,11 @@ import {
 	create_User,
 	getAllUsers,
 } from './controllers/user.controller.js';
+import loginLimiter from './middleware/loginLimiter.js';
 
 const router = Router();
 
-router.post('/login', loginUser);
+router.post('/login', loginLimiter, loginUser);
 router.post('/create', create_User);
 router.get('/', getAllUsers);
 
