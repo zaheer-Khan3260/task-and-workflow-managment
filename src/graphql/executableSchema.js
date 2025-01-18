@@ -1,8 +1,10 @@
 import { makeExecutableSchema } from '@graphql-tools/schema';
-import { userTypeDefs } from './userSchema/userSchema.js';
-import { userResolvers } from './userResolver/userResolver.js';
+import { userTypeDefs } from './schema/userSchema.js';
+import { taskTypeDefs } from './schema/taskSchema.js';
+import { userResolvers } from './resolvers/userResolver.js';
+import { taskResolvers } from './resolvers/taskResolver.js';
 
 export const schema = makeExecutableSchema({
-	typeDefs: [userTypeDefs],
-	resolvers: [userResolvers],
+	typeDefs: [userTypeDefs, taskTypeDefs],
+	resolvers: [userResolvers, taskResolvers],
 });
