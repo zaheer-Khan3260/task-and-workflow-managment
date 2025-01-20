@@ -1,12 +1,22 @@
-export const taskTypeDefs = `
+export const taskTypeDefs = `#graphql
+
+    type User {
+        id: ID!
+        name: String!
+        email: String!
+        role: String!
+        assignedTasks: [Task!]!
+        status: String!
+    }
+    
     type Task {
     id: ID!
     title: String!
     description: String!
-    parentTaskId: Task
+    parentTaskId: ID
     status: TaskStatus!
-    assignedUsers: [User]
-    dependencies: [Task]
+    assignedUsers: [User!]
+    dependencies: [ID!]
     createdAt: String!
     updatedAt: String!
     versioning: TaskVersioning!
@@ -67,7 +77,7 @@ type Mutation {
 
     updateTaskStatus(id: ID!, status: String!): Task!
 
-    assignTask(id: ID!, userId: [ID!]!): Task!
+    assignTask(id: ID!, userIds: [ID!]!): Task!
     addDependency(id: ID!, dependencyTaskId: ID!): Task!
 }
 
