@@ -12,16 +12,13 @@ const authMiddleware = () => {
 				.status(401)
 				.json({ message: 'Unauthorized: Token is missing' });
 		}
-
 		try {
 			const decoded = jwt.verify(token, process.env.ACCESS_TOKEN_SECRET);
-
 			const existingUser = await User.findById(decoded._id);
 			if (!existingUser) {
 				throw new ApiError(401, 'Unauthorized: User not found');
 			}
 			req.user = decoded;
-
 			next();
 		} catch (err) {
 			console.error('Token verification failed:', err);

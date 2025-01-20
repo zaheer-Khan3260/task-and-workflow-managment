@@ -65,7 +65,6 @@ export const taskResolvers = {
 				if (!context.user) {
 					throw new ApiError(401, 'Unauthorized: Please log in');
 				}
-
 				hasPermission(context.user.role, 'createTask');
 				// Sanitize and validate inputs
 				const sanitizedTitle = sanitizeHtml(title.trim());
@@ -131,15 +130,19 @@ export const taskResolvers = {
 					description: sanitizedDescription,
 					parentTaskId:
 						validParentTasks.length > 0
-							? validParentTasks[0]._id
+							? validParentTasks[0]._id.toString()
 							: null,
 					dependencies:
 						validDependencies.length > 0
-							? validDependencies.map((task) => task._id)
+							? validDependencies.map((task) =>
+									task._id.toString()
+							  )
 							: [],
 					assignedUsers:
 						validAssignedUsers.length > 0
-							? validAssignedUsers.map((user) => user._id)
+							? validAssignedUsers.map((user) =>
+									user._id.toString()
+							  )
 							: [],
 					status: { currentStatus: 'To Do', history: [] },
 					versioning: { currentVersion: 1, history: [] },
@@ -370,6 +373,29 @@ export const taskResolvers = {
 					? error
 					: new ApiError(500, error.message);
 			}
+		},
+	},
+
+	Task: {
+		assignedUsers: async (task) => {
+			let assignedUsers = await User.find({
+				_id: { $in: task.assignedUsers },
+			});
+			return assignedUsers.map((user) => ({
+				id: user._id.toString(),
+				name: user.name,
+				email: user.email,
+				role: user.role,
+				status: user.status,
+			}));
+		},
+
+		parentTaskId: async (task) => {
+			return await Task.findById(task.parentTaskId);
+		},
+
+		dependencies: async (task) => {
+			return await Task.find({ _id: { $in: task.dependencies } });
 		},
 	},
 };

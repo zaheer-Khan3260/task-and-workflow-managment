@@ -15,7 +15,7 @@ const hasPermission = (userRole, route) => {
 	if (userRole === 'admin') {
 		return true;
 	}
-	if (permission[userRole].includes(route)) {
+	if (permission[userRole]?.includes(route)) {
 		return true;
 	}
 	throw new ApiError(

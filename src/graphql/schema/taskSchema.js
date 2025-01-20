@@ -2,18 +2,18 @@ export const taskTypeDefs = `#graphql
 
     type User {
         id: ID!
-        name: String!
-        email: String!
-        role: String!
-        assignedTasks: [Task!]!
-        status: String!
+        name: String
+        email: String
+        role: String
+       
+        status: String
     }
     
     type Task {
     id: ID!
     title: String!
     description: String!
-    parentTaskId: ID
+    parentTaskId: Task
     status: TaskStatus!
     assignedUsers: [User!]
     dependencies: [ID!]
@@ -56,11 +56,24 @@ type DeleteTaskResponse {
     success: Boolean!
     id: ID!
 }
-
+  
 type Query {
     tasks: [Task!]!
 }
 
+type createTaskResponse {
+    id: ID!
+    title: String!
+    description: String!
+    parentTaskId: ID
+    status: TaskStatus!
+    assignedUsers: [ID!]
+    dependencies: [ID!]
+    createdAt: String!
+    updatedAt: String!
+    versioning: TaskVersioning!
+    dueDate: String!
+}
 type Mutation {
     createTask(
         title: String!,
@@ -69,7 +82,7 @@ type Mutation {
         dependencies: [ID],
         parentTaskId: ID,
         assignedUsers: [ID]
-    ): Task!
+    ): createTaskResponse!
 
     updateTask(id: ID!, input: UpdateTaskInput!): Task!
 
@@ -80,6 +93,5 @@ type Mutation {
     assignTask(id: ID!, userIds: [ID!]!): Task!
     addDependency(id: ID!, dependencyTaskId: ID!): Task!
 }
-
 
 `;

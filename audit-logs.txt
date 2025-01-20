@@ -1,0 +1,438 @@
+<2025-01-18T06:23:24.043Z> || Tag: Fetched Users || user_count: 5
+<2025-01-18T06:23:36.988Z> || Tag: User logged in || user_id: 678a60e0034fe20b4406dbe4 || user_name: test || role: admin
+<2025-01-18T06:33:24.063Z> || Tag: User logged in || user_id: 678a60e0034fe20b4406dbe4 || user_name: test || role: admin
+<2025-01-18T06:36:54.961Z> || Tag: User logged in || user_id: 678a60e0034fe20b4406dbe4 || user_name: test || role: admin
+<2025-01-18T06:49:23.246Z> || Tag: User logged in || user_id: 678b47874bc3ddd8cfcc1c4d || user_name: test || role: team_member
+<2025-01-18T07:07:03.474Z> || 
+					Tag: Task created || task_id: 678b531732c2c9ab26b37181 || task_title: complete the payment gatway integration || 
+					task_description: intergrat the razorpay payment gatway in the backend so user can make payment and take a subscription of our product || task_assignedUsers: 678b47874bc3ddd8cfcc1c4d|| 
+					task_status: { currentStatus: 'To Do', history: [] }
+<2025-01-18T07:11:15.771Z> || Tag: Fetched Tasks || Fetched by: test user_id: 678a60e0034fe20b4406dbe4 || task_count: 1
+<2025-01-18T07:12:02.922Z> || Tag: User logged in || user_id: 678b46d1213f9efb4fa4ed40 || user_name: test || role: team_member
+<2025-01-18T07:17:11.642Z> || Tag: User logged in || user_id: 678a60e0034fe20b4406dbe4 || user_name: test || role: admin
+<2025-01-18T07:20:32.568Z> || Tag: User logged in || user_id: 678a60e0034fe20b4406dbe4 || user_name: test || role: admin
+<2025-01-18T07:22:11.748Z> || 
+					Tag: Task created || task_id: 678b56a3ff4f1ad14bcd2cc6 || task_title: complete the payment gatway integration || 
+					task_description: intergrat the razorpay payment gatway in the backend so user can make payment and take a subscription of our product || task_assignedUsers: 678b47874bc3ddd8cfcc1c4d|| 
+					task_status: { currentStatus: 'To Do', history: [] }
+<2025-01-18T07:24:42.965Z> || Tag: Fetched Tasks || Fetched by: test user_id: 678a60e0034fe20b4406dbe4 || task_count: 2
+<2025-01-18T07:28:14.886Z> || Tag: User logged in || user_id: 678b47874bc3ddd8cfcc1c4d || user_name: test || role: team_member
+<2025-01-18T07:29:21.228Z> || Tag: Fetched Tasks || Fetched by: test user_id: 678b47874bc3ddd8cfcc1c4d || task_count: 2
+<2025-01-18T07:29:57.184Z> || Tag: Fetched Tasks || Fetched by: test user_id: 678b47874bc3ddd8cfcc1c4d || task_count: 2
+<2025-01-18T07:32:21.071Z> || Tag: User logged in || user_id: 678b46d1213f9efb4fa4ed40 || user_name: test || role: team_member
+<2025-01-18T07:39:39.059Z> || Tag: User logged in || user_id: 678a6138034fe20b4406dbe8 || user_name: test || role: team_lead
+<2025-01-18T07:40:35.195Z> || Tag: Fetched Tasks || Fetched by: test user_id: 678a6138034fe20b4406dbe8 || task_count: 2
+<2025-01-18T07:43:03.996Z> || Tag: User created || user_id: 678b5b872d3db633dd08bd48 || user_name: test || role: project_manager
+<2025-01-18T07:43:14.797Z> || Tag: User logged in || user_id: 678b5b872d3db633dd08bd48 || user_name: test || role: project_manager
+<2025-01-18T07:44:33.263Z> || Tag: Fetched Tasks || Fetched by: test user_id: 678b5b872d3db633dd08bd48 || task_count: 2
+<2025-01-18T08:03:07.968Z> || 
+					Tag: Task created || task_id: 678b603b2d3db633dd08bd71 || task_title: complete Task and workflow managment || 
+					task_description: complete the task and workflow managment with jwt token and RBAC system so a particular user can access only particular routes and resolers || task_assignedUsers: 678b47d17ba85b8d3dc301f3|| 
+					task_status: { currentStatus: 'To Do', history: [] }
+<2025-01-18T08:07:31.008Z> || Tag: User logged in || user_id: 678a6138034fe20b4406dbe8 || user_name: test || role: team_lead
+<2025-01-18T08:11:02.200Z> || Tag: User logged in || user_id: 678b47874bc3ddd8cfcc1c4d || user_name: test || role: team_member
+<2025-01-18T09:38:06.604Z> || Tag: User logged in || user_id: 678a60e0034fe20b4406dbe4 || user_name: test || role: admin
+<2025-01-18T09:46:07.012Z> || Tag: Task updated || task_id: 678b56a3ff4f1ad14bcd2cc6 || task_title: complete the stripe payment gateway. || task_description: complete the stripe payment gateway. so anyone can pay money through the strip and we have multiple payment options || task_assignedUsers: 678b47874bc3ddd8cfcc1c4d || task_status: { currentStatus: 'To Do', history: [] }
+<2025-01-18T09:49:39.759Z> || Tag: Task updated || task_id: 678b56a3ff4f1ad14bcd2cc6 || task_title: complete the stripe payment gateway. || task_description: complete the stripe payment gateway. so anyone can pay money through the strip and we have multiple payment options || task_assignedUsers: 678b47874bc3ddd8cfcc1c4d || task_status: { currentStatus: 'To Do', history: [] }
+<2025-01-18T09:52:46.118Z> || Tag: Fetched Tasks || Fetched by: test user_id: 678a60e0034fe20b4406dbe4 || task_count: 3
+<2025-01-18T09:53:17.022Z> || Tag: Task updated || task_id: 678b56a3ff4f1ad14bcd2cc6 || task_title: complete the payment gatway integration || task_description: intergrat the razorpay payment gatway in the backend so user can make payment and take a subscription of our product || task_assignedUsers: 678b47874bc3ddd8cfcc1c4d || task_status: { currentStatus: 'To Do', history: [] }
+<2025-01-18T09:55:24.822Z> || Tag: Task updated || task_id: 678b56a3ff4f1ad14bcd2cc6 || task_title: complete the payment gatway integration || task_description: intergrat the razorpay payment gatway in the backend so user can make payment and take a subscription of our product || task_assignedUsers: 678b47874bc3ddd8cfcc1c4d || task_status: { currentStatus: 'To Do', history: [] }
+<2025-01-18T09:56:20.065Z> || Tag: Task updated || task_id: 678b56a3ff4f1ad14bcd2cc6 || task_title: complete the payment gatway integration || task_description: intergrat the razorpay payment gatway in the backend so user can make payment and take a subscription of our product || task_assignedUsers: 678b47874bc3ddd8cfcc1c4d || task_status: { currentStatus: 'To Do', history: [] }
+<2025-01-18T09:57:26.112Z> || Tag: Task updated || task_id: 678b56a3ff4f1ad14bcd2cc6 || task_title: Complete the stripe payment gateway || task_description: intergrat the stripe payment gatway in the backend so user can make payment and take a subscription of our product || task_assignedUsers: 678b47874bc3ddd8cfcc1c4d || task_status: { currentStatus: 'To Do', history: [] }
+<2025-01-18T09:58:47.841Z> || Tag: User logged in || user_id: 678b5b872d3db633dd08bd48 || user_name: test || role: project_manager
+<2025-01-18T09:59:51.876Z> || Tag: Task updated || task_id: 678b56a3ff4f1ad14bcd2cc6 || task_title: complete the payment gatway integration || task_description: intergrat the razorpay payment gatway in the backend so user can make payment and take a subscription of our product || task_assignedUsers: 678b47874bc3ddd8cfcc1c4d || task_status: { currentStatus: 'To Do', history: [] }
+<2025-01-18T10:02:47.909Z> || Tag: User logged in || user_id: 678a6138034fe20b4406dbe8 || user_name: test || role: team_lead
+<2025-01-18T10:06:21.873Z> || Tag: User logged in || user_id: 678b47874bc3ddd8cfcc1c4d || user_name: test || role: team_member
+<2025-01-18T10:20:24.309Z> || Tag: Updated Task Status || task_id: 678b531732c2c9ab26b37181 || task_title: complete the payment gatway integration || task_description: intergrat the razorpay payment gatway in the backend so user can make payment and take a subscription of our product || task_assignedUsers: 678b47874bc3ddd8cfcc1c4d || task_status: {
+  currentStatus: 'In Progress',
+  history: [
+    {
+      status: 'In Progress',
+      changedAt: 2025-01-18T10:20:24.268Z,
+      changedBy: new ObjectId('678a60e0034fe20b4406dbe4'),
+      _id: new ObjectId('678b8068ab579c52b091ad3b')
+    }
+  ]
+}
+<2025-01-18T10:31:09.107Z> || Tag: Updated Task Status || task_id: 678b531732c2c9ab26b37181 || task_title: complete the payment gatway integration || task_description: intergrat the razorpay payment gatway in the backend so user can make payment and take a subscription of our product || task_assignedUsers: 678b47874bc3ddd8cfcc1c4d || task_status: {
+  currentStatus: 'To Do',
+  history: [
+    {
+      status: 'In Progress',
+      changedAt: 2025-01-18T10:20:24.268Z,
+      changedBy: new ObjectId('678a60e0034fe20b4406dbe4'),
+      _id: new ObjectId('678b8068ab579c52b091ad3b')
+    },
+    {
+      status: 'To Do',
+      changedAt: 2025-01-18T10:31:09.068Z,
+      changedBy: new ObjectId('678a60e0034fe20b4406dbe4'),
+      _id: new ObjectId('678b82ed835a2d2a6e6bfa84')
+    }
+  ]
+}
+<2025-01-18T10:43:15.375Z> || Tag: User logged in || user_id: 678a60e0034fe20b4406dbe4 || user_name: test || role: admin
+<2025-01-18T10:44:15.269Z> || Tag: Updated Task Status || task_id: 678b531732c2c9ab26b37181 || task_title: complete the payment gatway integration || task_description: intergrat the razorpay payment gatway in the backend so user can make payment and take a subscription of our product || task_assignedUsers: 678b47874bc3ddd8cfcc1c4d || task_status: In Progress
+<2025-01-18T10:47:21.272Z> || Tag: User logged in || user_id: 678a6138034fe20b4406dbe8 || user_name: test || role: team_lead
+<2025-01-18T10:48:19.156Z> || Tag: Updated Task Status || task_id: 678b531732c2c9ab26b37181 || task_title: complete the payment gatway integration || task_description: intergrat the razorpay payment gatway in the backend so user can make payment and take a subscription of our product || task_assignedUsers: 678b47874bc3ddd8cfcc1c4d || task_status: Done
+<2025-01-18T10:50:48.921Z> || Tag: User logged in || user_id: 678b5b872d3db633dd08bd48 || user_name: test || role: project_manager
+<2025-01-18T10:52:15.333Z> || Tag: Updated Task Status || task_id: 678b531732c2c9ab26b37181 || task_title: complete the payment gatway integration || task_description: intergrat the razorpay payment gatway in the backend so user can make payment and take a subscription of our product || task_assignedUsers: 678b47874bc3ddd8cfcc1c4d || task_status: In Progress
+<2025-01-18T10:55:02.308Z> || Tag: Updated Task Status || task_id: 678b56a3ff4f1ad14bcd2cc6 || task_title: complete the payment gatway integration || task_description: intergrat the razorpay payment gatway in the backend so user can make payment and take a subscription of our product || task_assignedUsers: 678b47874bc3ddd8cfcc1c4d || task_status: In Progress
+<2025-01-18T10:55:57.840Z> || Tag: Updated Task Status || task_id: 678b603b2d3db633dd08bd71 || task_title: complete Task and workflow managment || task_description: complete the task and workflow managment with jwt token and RBAC system so a particular user can access only particular routes and resolers || task_assignedUsers: 678b47d17ba85b8d3dc301f3 || task_status: In Progress
+<2025-01-18T10:56:56.836Z> || Tag: User logged in || user_id: 678b47874bc3ddd8cfcc1c4d || user_name: test || role: team_member
+<2025-01-18T10:57:33.793Z> || Tag: User logged in || user_id: 678b47874bc3ddd8cfcc1c4d || user_name: test || role: team_member
+<2025-01-18T10:58:05.358Z> || Tag: Updated Task Status || task_id: 678b603b2d3db633dd08bd71 || task_title: complete Task and workflow managment || task_description: complete the task and workflow managment with jwt token and RBAC system so a particular user can access only particular routes and resolers || task_assignedUsers: 678b47d17ba85b8d3dc301f3 || task_status: Done
+<2025-01-18T11:00:18.752Z> || Tag: User logged in || user_id: 678a60e0034fe20b4406dbe4 || user_name: test || role: admin
+<2025-01-18T11:02:44.686Z> || Tag: Deleted Task || task_id: 678b603b2d3db633dd08bd71 || task_title: complete Task and workflow managment ||task_description: complete the task and workflow managment with jwt token and RBAC system so a particular user can access only particular routes and resolers || task_assignedUsers: 678b47d17ba85b8d3dc301f3 || task_status: {
+  currentStatus: 'Done',
+  history: [
+    {
+      status: 'In Progress',
+      changedAt: 2025-01-18T10:58:05.326Z,
+      changedBy: new ObjectId('678b47874bc3ddd8cfcc1c4d'),
+      _id: new ObjectId('678b893d24f995925d0d45c4')
+    },
+    {
+      status: 'To Do',
+      changedAt: 2025-01-18T10:55:57.804Z,
+      changedBy: new ObjectId('678b5b872d3db633dd08bd48'),
+      _id: new ObjectId('678b88bd327de99f747ac489')
+    }
+  ]
+}
+<2025-01-18T11:08:49.637Z> || Tag: User logged in || user_id: 678b47874bc3ddd8cfcc1c4d || user_name: test || role: team_member
+<2025-01-18T11:09:37.560Z> || Tag: User logged in || user_id: 678a6138034fe20b4406dbe8 || user_name: test || role: team_lead
+<2025-01-18T11:10:29.724Z> || Tag: User logged in || user_id: 678b5b872d3db633dd08bd48 || user_name: test || role: project_manager
+<2025-01-18T11:25:56.002Z> || Tag: Assigned Task || task_id: 678b56a3ff4f1ad14bcd2cc6 || task_title: complete the payment gatway integration || task_description: intergrat the razorpay payment gatway in the backend so user can make payment and take a subscription of our product || task_assignedUsers: 678b47874bc3ddd8cfcc1c4d,678b47d17ba85b8d3dc301f3,678b46d1213f9efb4fa4ed40 || task_status: {
+  currentStatus: 'In Progress',
+  history: [
+    {
+      status: 'In Progress',
+      changedAt: 2025-01-18T10:55:02.279Z,
+      changedBy: new ObjectId('678b5b872d3db633dd08bd48'),
+      _id: new ObjectId('678b88866a67e2354bfe5c17')
+    }
+  ]
+}
+<2025-01-18T11:28:20.961Z> || Tag: Assigned Task || task_id: 678b56a3ff4f1ad14bcd2cc6 || task_title: complete the payment gatway integration || task_description: intergrat the razorpay payment gatway in the backend so user can make payment and take a subscription of our product || task_assignedUsers: {
+  _id: new ObjectId('678b47874bc3ddd8cfcc1c4d'),
+  name: 'test',
+  email: 'test4@gmail.com',
+  password: '$2b$10$m6l5aIVUV8dpdsCd5yiiteR4S3TzlkIhzKZiWxvi.iBCP/wIMCEGu',
+  role: 'team_member',
+  assignedTasks: [],
+  status: 'active',
+  createdAt: 2025-01-18T06:17:43.157Z,
+  updatedAt: 2025-01-18T11:08:49.581Z,
+  __v: 0,
+  refreshToken: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzhiNDc4NzRiYzNkZGQ4Y2ZjYzFjNGQiLCJpYXQiOjE3MzcxOTg1MjksImV4cCI6MTczODA2MjUyOX0.rTKFZTyikcAm4ltpzZaLJqYIQpvG0aKE0fC-_ifw458'
+},{
+  _id: new ObjectId('678b47d17ba85b8d3dc301f3'),
+  name: 'test',
+  email: 'test5@gmail.com',
+  password: '$2b$10$Ky1jb06QZaaEnZlNpXJN5u68SNvuGOH/qMDCGOEScd0UbZ/qbLucu',
+  role: 'team_member',
+  assignedTasks: [],
+  status: 'active',
+  createdAt: 2025-01-18T06:18:57.849Z,
+  updatedAt: 2025-01-18T06:18:57.849Z,
+  __v: 0
+},{
+  _id: new ObjectId('678b46d1213f9efb4fa4ed40'),
+  name: 'test',
+  email: 'test3@gmail.com',
+  password: '$2b$10$.Mnki492mSjxiiTg0WexxeMEDso7qkAuFmHLhcy93OiAVLFutGxpK',
+  role: 'team_member',
+  assignedTasks: [],
+  status: 'active',
+  createdAt: 2025-01-18T06:14:41.761Z,
+  updatedAt: 2025-01-18T07:32:21.010Z,
+  __v: 0,
+  refreshToken: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzhiNDZkMTIxM2Y5ZWZiNGZhNGVkNDAiLCJpYXQiOjE3MzcxODU1NDEsImV4cCI6MTczODA0OTU0MX0.elLv9I-jk8lipb9W5U5l2H27Uj3YM6DJVlbiFxUdTxI'
+},{
+  name: 'test',
+  email: 'test5@gmail.com',
+  password: '$2b$10$Ky1jb06QZaaEnZlNpXJN5u68SNvuGOH/qMDCGOEScd0UbZ/qbLucu',
+  role: 'team_member',
+  assignedTasks: [],
+  status: 'active',
+  _id: new ObjectId('678b47d17ba85b8d3dc301f3'),
+  createdAt: 2025-01-18T06:18:57.849Z,
+  updatedAt: 2025-01-18T06:18:57.849Z,
+  __v: 0
+} || task_status: {
+  currentStatus: 'In Progress',
+  history: [
+    {
+      status: 'In Progress',
+      changedAt: 2025-01-18T10:55:02.279Z,
+      changedBy: new ObjectId('678b5b872d3db633dd08bd48'),
+      _id: new ObjectId('678b88866a67e2354bfe5c17')
+    }
+  ]
+}
+<2025-01-18T11:29:19.678Z> || Tag: Assigned Task || task_id: 678b56a3ff4f1ad14bcd2cc6 || task_title: complete the payment gatway integration || task_description: intergrat the razorpay payment gatway in the backend so user can make payment and take a subscription of our product || task_assignedUsers: {
+  _id: new ObjectId('678b47874bc3ddd8cfcc1c4d'),
+  name: 'test',
+  email: 'test4@gmail.com',
+  password: '$2b$10$m6l5aIVUV8dpdsCd5yiiteR4S3TzlkIhzKZiWxvi.iBCP/wIMCEGu',
+  role: 'team_member',
+  assignedTasks: [],
+  status: 'active',
+  createdAt: 2025-01-18T06:17:43.157Z,
+  updatedAt: 2025-01-18T11:08:49.581Z,
+  __v: 0,
+  refreshToken: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzhiNDc4NzRiYzNkZGQ4Y2ZjYzFjNGQiLCJpYXQiOjE3MzcxOTg1MjksImV4cCI6MTczODA2MjUyOX0.rTKFZTyikcAm4ltpzZaLJqYIQpvG0aKE0fC-_ifw458'
+},{
+  _id: new ObjectId('678b47d17ba85b8d3dc301f3'),
+  name: 'test',
+  email: 'test5@gmail.com',
+  password: '$2b$10$Ky1jb06QZaaEnZlNpXJN5u68SNvuGOH/qMDCGOEScd0UbZ/qbLucu',
+  role: 'team_member',
+  assignedTasks: [],
+  status: 'active',
+  createdAt: 2025-01-18T06:18:57.849Z,
+  updatedAt: 2025-01-18T06:18:57.849Z,
+  __v: 0
+},{
+  _id: new ObjectId('678b46d1213f9efb4fa4ed40'),
+  name: 'test',
+  email: 'test3@gmail.com',
+  password: '$2b$10$.Mnki492mSjxiiTg0WexxeMEDso7qkAuFmHLhcy93OiAVLFutGxpK',
+  role: 'team_member',
+  assignedTasks: [],
+  status: 'active',
+  createdAt: 2025-01-18T06:14:41.761Z,
+  updatedAt: 2025-01-18T07:32:21.010Z,
+  __v: 0,
+  refreshToken: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzhiNDZkMTIxM2Y5ZWZiNGZhNGVkNDAiLCJpYXQiOjE3MzcxODU1NDEsImV4cCI6MTczODA0OTU0MX0.elLv9I-jk8lipb9W5U5l2H27Uj3YM6DJVlbiFxUdTxI'
+} || task_status: {
+  currentStatus: 'In Progress',
+  history: [
+    {
+      status: 'In Progress',
+      changedAt: 2025-01-18T10:55:02.279Z,
+      changedBy: new ObjectId('678b5b872d3db633dd08bd48'),
+      _id: new ObjectId('678b88866a67e2354bfe5c17')
+    }
+  ]
+}
+<2025-01-18T11:33:22.905Z> || Tag: User logged in || user_id: 678a6138034fe20b4406dbe8 || user_name: test || role: team_lead
+<2025-01-18T11:34:08.661Z> || Tag: User logged in || user_id: 678b47874bc3ddd8cfcc1c4d || user_name: test || role: team_member
+<2025-01-18T11:35:34.382Z> || Tag: User logged in || user_id: 678b47874bc3ddd8cfcc1c4d || user_name: test || role: team_member
+<2025-01-18T11:35:42.371Z> || Tag: User logged in || user_id: 678b46d1213f9efb4fa4ed40 || user_name: test || role: team_member
+<2025-01-18T11:39:59.660Z> || Tag: User logged in || user_id: 678b46d1213f9efb4fa4ed40 || user_name: test || role: team_member
+<2025-01-18T11:40:04.150Z> || Tag: Assigned Task || task_id: 678b56a3ff4f1ad14bcd2cc6 || task_title: complete the payment gatway integration || task_description: intergrat the razorpay payment gatway in the backend so user can make payment and take a subscription of our product || task_assignedUsers: {
+  _id: new ObjectId('678b47874bc3ddd8cfcc1c4d'),
+  name: 'test',
+  email: 'test4@gmail.com',
+  password: '$2b$10$m6l5aIVUV8dpdsCd5yiiteR4S3TzlkIhzKZiWxvi.iBCP/wIMCEGu',
+  role: 'team_member',
+  assignedTasks: [],
+  status: 'active',
+  createdAt: 2025-01-18T06:17:43.157Z,
+  updatedAt: 2025-01-18T11:35:34.327Z,
+  __v: 0,
+  refreshToken: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzhiNDc4NzRiYzNkZGQ4Y2ZjYzFjNGQiLCJpYXQiOjE3MzcyMDAxMzQsImV4cCI6MTczODA2NDEzNH0.mgQ253-ToVrwZHfmt-rsUVG9ClSqiR4GM22CIpvjcEI'
+},{
+  _id: new ObjectId('678b47d17ba85b8d3dc301f3'),
+  name: 'test',
+  email: 'test5@gmail.com',
+  password: '$2b$10$Ky1jb06QZaaEnZlNpXJN5u68SNvuGOH/qMDCGOEScd0UbZ/qbLucu',
+  role: 'team_member',
+  assignedTasks: [],
+  status: 'active',
+  createdAt: 2025-01-18T06:18:57.849Z,
+  updatedAt: 2025-01-18T06:18:57.849Z,
+  __v: 0
+},{
+  _id: new ObjectId('678b46d1213f9efb4fa4ed40'),
+  name: 'test',
+  email: 'test3@gmail.com',
+  password: '$2b$10$.Mnki492mSjxiiTg0WexxeMEDso7qkAuFmHLhcy93OiAVLFutGxpK',
+  role: 'team_member',
+  assignedTasks: [],
+  status: 'active',
+  createdAt: 2025-01-18T06:14:41.761Z,
+  updatedAt: 2025-01-18T11:39:59.601Z,
+  __v: 0,
+  refreshToken: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzhiNDZkMTIxM2Y5ZWZiNGZhNGVkNDAiLCJpYXQiOjE3MzcyMDAzOTksImV4cCI6MTczODA2NDM5OX0.iIrXjiNyUehYh6c96O8RuM3aul1C27NhCLJr00CUIDg'
+},{
+  name: 'test',
+  email: 'test5@gmail.com',
+  password: '$2b$10$Ky1jb06QZaaEnZlNpXJN5u68SNvuGOH/qMDCGOEScd0UbZ/qbLucu',
+  role: 'team_member',
+  assignedTasks: [],
+  status: 'active',
+  _id: new ObjectId('678b47d17ba85b8d3dc301f3'),
+  createdAt: 2025-01-18T06:18:57.849Z,
+  updatedAt: 2025-01-18T06:18:57.849Z,
+  __v: 0
+} || task_status: {
+  currentStatus: 'In Progress',
+  history: [
+    {
+      status: 'In Progress',
+      changedAt: 2025-01-18T10:55:02.279Z,
+      changedBy: new ObjectId('678b5b872d3db633dd08bd48'),
+      _id: new ObjectId('678b88866a67e2354bfe5c17')
+    }
+  ]
+}
+<2025-01-18T11:40:14.507Z> || Tag: Assigned Task || task_id: 678b56a3ff4f1ad14bcd2cc6 || task_title: complete the payment gatway integration || task_description: intergrat the razorpay payment gatway in the backend so user can make payment and take a subscription of our product || task_assignedUsers: {
+  _id: new ObjectId('678b47874bc3ddd8cfcc1c4d'),
+  name: 'test',
+  email: 'test4@gmail.com',
+  password: '$2b$10$m6l5aIVUV8dpdsCd5yiiteR4S3TzlkIhzKZiWxvi.iBCP/wIMCEGu',
+  role: 'team_member',
+  assignedTasks: [],
+  status: 'active',
+  createdAt: 2025-01-18T06:17:43.157Z,
+  updatedAt: 2025-01-18T11:35:34.327Z,
+  __v: 0,
+  refreshToken: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzhiNDc4NzRiYzNkZGQ4Y2ZjYzFjNGQiLCJpYXQiOjE3MzcyMDAxMzQsImV4cCI6MTczODA2NDEzNH0.mgQ253-ToVrwZHfmt-rsUVG9ClSqiR4GM22CIpvjcEI'
+},{
+  _id: new ObjectId('678b47d17ba85b8d3dc301f3'),
+  name: 'test',
+  email: 'test5@gmail.com',
+  password: '$2b$10$Ky1jb06QZaaEnZlNpXJN5u68SNvuGOH/qMDCGOEScd0UbZ/qbLucu',
+  role: 'team_member',
+  assignedTasks: [],
+  status: 'active',
+  createdAt: 2025-01-18T06:18:57.849Z,
+  updatedAt: 2025-01-18T06:18:57.849Z,
+  __v: 0
+},{
+  _id: new ObjectId('678b46d1213f9efb4fa4ed40'),
+  name: 'test',
+  email: 'test3@gmail.com',
+  password: '$2b$10$.Mnki492mSjxiiTg0WexxeMEDso7qkAuFmHLhcy93OiAVLFutGxpK',
+  role: 'team_member',
+  assignedTasks: [],
+  status: 'active',
+  createdAt: 2025-01-18T06:14:41.761Z,
+  updatedAt: 2025-01-18T11:39:59.601Z,
+  __v: 0,
+  refreshToken: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzhiNDZkMTIxM2Y5ZWZiNGZhNGVkNDAiLCJpYXQiOjE3MzcyMDAzOTksImV4cCI6MTczODA2NDM5OX0.iIrXjiNyUehYh6c96O8RuM3aul1C27NhCLJr00CUIDg'
+} || task_status: {
+  currentStatus: 'In Progress',
+  history: [
+    {
+      status: 'In Progress',
+      changedAt: 2025-01-18T10:55:02.279Z,
+      changedBy: new ObjectId('678b5b872d3db633dd08bd48'),
+      _id: new ObjectId('678b88866a67e2354bfe5c17')
+    }
+  ]
+}
+<2025-01-18T11:40:19.808Z> || Tag: User logged in || user_id: 678b46d1213f9efb4fa4ed40 || user_name: test || role: team_member
+<2025-01-18T11:44:04.471Z> || Tag: Added Dependency || task_id: 678b56a3ff4f1ad14bcd2cc6 || task_title: complete the payment gatway integration || task_description: intergrat the razorpay payment gatway in the backend so user can make payment and take a subscription of our product || task_assignedUsers: 678b47874bc3ddd8cfcc1c4d,678b47d17ba85b8d3dc301f3,678b46d1213f9efb4fa4ed40 || task_status: {
+  currentStatus: 'In Progress',
+  history: [
+    {
+      status: 'In Progress',
+      changedAt: 2025-01-18T10:55:02.279Z,
+      changedBy: new ObjectId('678b5b872d3db633dd08bd48'),
+      _id: new ObjectId('678b88866a67e2354bfe5c17')
+    }
+  ]
+} 
+<2025-01-18T11:47:42.731Z> || Tag: Added Dependency || task_id: 678b56a3ff4f1ad14bcd2cc6 || task_title: complete the payment gatway integration || task_description: intergrat the razorpay payment gatway in the backend so user can make payment and take a subscription of our product || task_assignedUsers: 678b47874bc3ddd8cfcc1c4d,678b47d17ba85b8d3dc301f3,678b46d1213f9efb4fa4ed40 || task_status: {
+  currentStatus: 'In Progress',
+  history: [
+    {
+      status: 'In Progress',
+      changedAt: 2025-01-18T10:55:02.279Z,
+      changedBy: new ObjectId('678b5b872d3db633dd08bd48'),
+      _id: new ObjectId('678b88866a67e2354bfe5c17')
+    }
+  ]
+} 
+<2025-01-20T05:18:37.733Z> || Tag: User logged in || user_id: 678a60e0034fe20b4406dbe4 || user_name: test || role: admin
+<2025-01-20T05:20:48.731Z> || Tag: User logged in || user_id: 678b5b872d3db633dd08bd48 || user_name: test || role: project_manager
+<2025-01-20T05:21:35.028Z> || Tag: User logged in || user_id: 678a6138034fe20b4406dbe8 || user_name: test || role: team_lead
+<2025-01-20T05:22:15.048Z> || Tag: User logged in || user_id: 678b47874bc3ddd8cfcc1c4d || user_name: test || role: team_member
+<2025-01-20T06:20:16.803Z> || Tag: User logged in || user_id: 678a60e0034fe20b4406dbe4 || user_name: test || role: admin
+<2025-01-20T06:28:38.519Z> || Tag: Task created || task_id: 678ded163e2afccb335d481b || task_title: complete the frontend of dashboard || task_description: complete the frontend before EOD and submit to dheeraj || task_assignedUsers: 678b47874bc3ddd8cfcc1c4d|| task_status: { currentStatus: 'To Do', history: [] }
+<2025-01-20T06:30:06.336Z> || Tag: Task created || task_id: 678ded6e80cbfb55ce4d02f7 || task_title: complete the frontend of dashboard || task_description: complete the frontend before EOD and submit to dheeraj || task_assignedUsers: {
+  _id: new ObjectId('678b47874bc3ddd8cfcc1c4d'),
+  name: 'test',
+  email: 'test4@gmail.com',
+  password: '$2b$10$m6l5aIVUV8dpdsCd5yiiteR4S3TzlkIhzKZiWxvi.iBCP/wIMCEGu',
+  role: 'team_member',
+  assignedTasks: [],
+  status: 'active',
+  createdAt: 2025-01-18T06:17:43.157Z,
+  updatedAt: 2025-01-20T05:22:14.993Z,
+  __v: 0,
+  refreshToken: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzhiNDc4NzRiYzNkZGQ4Y2ZjYzFjNGQiLCJpYXQiOjE3MzczNTA1MzQsImV4cCI6MTczODIxNDUzNH0.vJycLyEv1z3-tvwG8VWGw0Cx9_ObG9kaqEFUHMwrFDI'
+}|| task_status: { currentStatus: 'To Do', history: [] }
+<2025-01-20T06:36:11.167Z> || Tag: Task created || task_id: 678deedb17858a8c16864687 || task_title: complete the frontend of dashboard || task_description: complete the frontend before EOD and submit to dheeraj || task_assignedUsers: 678b47874bc3ddd8cfcc1c4d|| task_status: { currentStatus: 'To Do', history: [] }
+<2025-01-20T06:37:05.276Z> || Tag: Fetched Tasks || Fetched by: test user_id: 678a60e0034fe20b4406dbe4 || task_count: 5
+<2025-01-20T06:54:59.123Z> || Tag: Fetched Tasks || Fetched by: test user_id: 678a60e0034fe20b4406dbe4 || task_count: 5
+<2025-01-20T06:56:30.814Z> || Tag: Fetched Tasks || Fetched by: test user_id: 678a60e0034fe20b4406dbe4 || task_count: 5
+<2025-01-20T06:57:34.907Z> || Tag: Fetched Tasks || Fetched by: test user_id: 678a60e0034fe20b4406dbe4 || task_count: 5
+<2025-01-20T06:58:20.037Z> || Tag: Fetched Tasks || Fetched by: test user_id: 678a60e0034fe20b4406dbe4 || task_count: 5
+<2025-01-20T06:59:08.962Z> || Tag: Fetched Tasks || Fetched by: test user_id: 678a60e0034fe20b4406dbe4 || task_count: 5
+<2025-01-20T06:59:48.153Z> || Tag: Fetched Tasks || Fetched by: test user_id: 678a60e0034fe20b4406dbe4 || task_count: 5
+<2025-01-20T07:07:56.347Z> || Tag: Fetched Tasks || Fetched by: test user_id: 678a60e0034fe20b4406dbe4 || task_count: 5
+<2025-01-20T07:09:20.341Z> || Tag: Fetched Tasks || Fetched by: test user_id: 678a60e0034fe20b4406dbe4 || task_count: 5
+<2025-01-20T07:11:02.231Z> || Tag: Fetched Tasks || Fetched by: test user_id: 678a60e0034fe20b4406dbe4 || task_count: 5
+<2025-01-20T07:11:50.695Z> || Tag: Fetched Tasks || Fetched by: test user_id: 678a60e0034fe20b4406dbe4 || task_count: 5
+<2025-01-20T07:13:44.065Z> || Tag: Fetched Tasks || Fetched by: test user_id: 678a60e0034fe20b4406dbe4 || task_count: 5
+<2025-01-20T07:14:22.666Z> || Tag: Fetched Tasks || Fetched by: test user_id: 678a60e0034fe20b4406dbe4 || task_count: 5
+<2025-01-20T07:17:11.434Z> || Tag: Fetched Tasks || Fetched by: test user_id: 678a60e0034fe20b4406dbe4 || task_count: 5
+<2025-01-20T07:18:39.906Z> || Tag: Fetched Tasks || Fetched by: test user_id: 678a60e0034fe20b4406dbe4 || task_count: 5
+<2025-01-20T07:18:49.037Z> || Tag: Fetched Tasks || Fetched by: test user_id: 678a60e0034fe20b4406dbe4 || task_count: 5
+<2025-01-20T07:19:01.310Z> || Tag: Fetched Tasks || Fetched by: test user_id: 678a60e0034fe20b4406dbe4 || task_count: 5
+<2025-01-20T07:19:15.953Z> || Tag: Fetched Tasks || Fetched by: test user_id: 678a60e0034fe20b4406dbe4 || task_count: 5
+<2025-01-20T07:19:22.561Z> || Tag: Fetched Tasks || Fetched by: test user_id: 678a60e0034fe20b4406dbe4 || task_count: 5
+<2025-01-20T07:19:44.510Z> || Tag: Fetched Tasks || Fetched by: test user_id: 678a60e0034fe20b4406dbe4 || task_count: 5
+<2025-01-20T07:20:50.280Z> || Tag: Fetched Tasks || Fetched by: test user_id: 678a60e0034fe20b4406dbe4 || task_count: 5
+<2025-01-20T07:22:51.076Z> || Tag: Fetched Tasks || Fetched by: test user_id: 678a60e0034fe20b4406dbe4 || task_count: 5
+<2025-01-20T07:23:42.437Z> || Tag: Fetched Tasks || Fetched by: test user_id: 678a60e0034fe20b4406dbe4 || task_count: 5
+<2025-01-20T07:30:26.095Z> || Tag: Task created || task_id: 678dfb9213f574d435d61a31 || task_title: complete the frontend of Authentication page || task_description: complete the frontend before EOD and submit to dheeraj || task_assignedUsers: 678b46d1213f9efb4fa4ed40|| task_status: { currentStatus: 'To Do', history: [] }
+<2025-01-20T07:31:29.516Z> || Tag: Fetched Tasks || Fetched by: test user_id: 678a60e0034fe20b4406dbe4 || task_count: 6
+<2025-01-20T07:46:51.157Z> || Tag: User logged in || user_id: 678a60e0034fe20b4406dbe4 || user_name: test || role: admin
+<2025-01-20T07:47:17.143Z> || Tag: Fetched Tasks || Fetched by: test user_id: 678a60e0034fe20b4406dbe4 || task_count: 6
+<2025-01-20T07:47:40.788Z> || Tag: Fetched Tasks || Fetched by: test user_id: 678a60e0034fe20b4406dbe4 || task_count: 6
+<2025-01-20T09:46:34.104Z> || Tag: User created || user_id: 678e1b79860d7c8497200970 || user_name: testuser1 || role: admin
+<2025-01-20T09:50:55.151Z> || Tag: User created || user_id: 678e1c7f04076800f7357997 || user_name: testuser2 || role: team_member
+<2025-01-20T10:20:13.437Z> || Tag: User created || user_id: 678e235d9edd5ace32f49096 || user_name: testuser3 || role: team_member
+<2025-01-20T10:28:04.202Z> || Tag: User logged in || user_id: 678e1b79860d7c8497200970 || user_name: testuser1 || role: admin
+<2025-01-20T10:28:31.124Z> || Tag: User logged in || user_id: 678a60e0034fe20b4406dbe4 || user_name: test || role: admin
+<2025-01-20T10:29:23.196Z> || Tag: User logged in || user_id: 678e1b79860d7c8497200970 || user_name: testuser1 || role: admin
+<2025-01-20T10:30:23.967Z> || Tag: User logged in || user_id: 678e1b79860d7c8497200970 || user_name: testuser1 || role: admin
+<2025-01-20T10:32:53.276Z> || Tag: User logged in || user_id: 678e1b79860d7c8497200970 || user_name: testuser1 || role: admin
+<2025-01-20T10:33:07.084Z> || Tag: User logged in || user_id: 678e1b79860d7c8497200970 || user_name: testuser1 || role: admin
+<2025-01-20T10:33:22.161Z> || Tag: User logged in || user_id: 678e1b79860d7c8497200970 || user_name: testuser1 || role: admin
+<2025-01-20T10:36:57.672Z> || Tag: User logged in || user_id: 678e1b79860d7c8497200970 || user_name: testuser1 || role: admin
+<2025-01-20T10:37:26.247Z> || Tag: User logged in || user_id: 678e1b79860d7c8497200970 || user_name: testuser1 || role: admin
+<2025-01-20T10:38:10.779Z> || Tag: User logged in || user_id: 678e1b79860d7c8497200970 || user_name: testuser1 || role: admin
+<2025-01-20T10:38:22.267Z> || Tag: User logged in || user_id: 678e1b79860d7c8497200970 || user_name: testuser1 || role: admin
+<2025-01-20T10:40:19.635Z> || Tag: User logged in || user_id: 678a60e0034fe20b4406dbe4 || user_name: test || role: admin
+<2025-01-20T10:40:29.541Z> || Tag: User logged in || user_id: 678e1b79860d7c8497200970 || user_name: testuser1 || role: admin
+<2025-01-20T10:40:29.740Z> || Tag: User logged in || user_id: 678e1b79860d7c8497200970 || user_name: testuser1 || role: admin
+<2025-01-20T10:40:44.677Z> || Tag: User logged in || user_id: 678e1b79860d7c8497200970 || user_name: testuser1 || role: admin
+<2025-01-20T10:40:44.855Z> || Tag: User logged in || user_id: 678e1b79860d7c8497200970 || user_name: testuser1 || role: admin
+<2025-01-20T11:08:29.497Z> || Tag: User logged in || user_id: 678e1b79860d7c8497200970 || user_name: testuser1 || role: admin
+<2025-01-20T11:08:29.698Z> || Tag: User logged in || user_id: 678e1b79860d7c8497200970 || user_name: testuser1 || role: admin
+<2025-01-20T11:10:32.718Z> || Tag: User logged in || user_id: 678e1b79860d7c8497200970 || user_name: testuser1 || role: admin
+<2025-01-20T11:10:32.906Z> || Tag: User logged in || user_id: 678e1b79860d7c8497200970 || user_name: testuser1 || role: admin
+<2025-01-20T11:38:50.649Z> || Tag: Fetched Users || user_count: 9
+<2025-01-20T11:47:35.296Z> || Tag: Fetched Users || user_count: 9
+<2025-01-20T11:50:51.540Z> || Tag: Fetched Users || user_count: 9
+<2025-01-20T11:55:32.325Z> || Tag: User logged in || user_id: 678a60e0034fe20b4406dbe4 || user_name: test || role: admin
+<2025-01-20T11:55:44.130Z> || Tag: Fetched Users || user_count: 9
+<2025-01-20T12:12:57.215Z> || Tag: Fetched Users || user_count: 9
+<2025-01-20T12:16:11.902Z> || Tag: Fetched Users || user_count: 9
+<2025-01-20T12:16:19.621Z> || Tag: Fetched Users || user_count: 9
+<2025-01-20T12:22:39.580Z> || Tag: User logged in || user_id: 678e1b79860d7c8497200970 || user_name: testuser1 || role: admin
+<2025-01-20T12:22:39.783Z> || Tag: User logged in || user_id: 678e1b79860d7c8497200970 || user_name: testuser1 || role: admin
+<2025-01-20T12:22:39.908Z> || Tag: Fetched Users || user_count: 9
+<2025-01-20T12:23:13.432Z> || Tag: User logged in || user_id: 678e1b79860d7c8497200970 || user_name: testuser1 || role: admin
+<2025-01-20T12:23:13.634Z> || Tag: User logged in || user_id: 678e1b79860d7c8497200970 || user_name: testuser1 || role: admin
+<2025-01-20T12:23:13.834Z> || Tag: Fetched Users || user_count: 9
+<2025-01-20T12:45:52.045Z> || Tag: Task created || task_id: 678e4580012f5560a915e2ba || task_title: Test Task || task_description: This is a test task || task_assignedUsers: 678b47d17ba85b8d3dc301f3|| task_status: { currentStatus: 'To Do', history: [] }
+<2025-01-20T12:50:40.704Z> || Tag: Task created || task_id: 678e46a0a9b0951fa4ee0d60 || task_title: Test Task || task_description: This is a test task || task_assignedUsers: 678b47d17ba85b8d3dc301f3|| task_status: { currentStatus: 'To Do', history: [] }
+<2025-01-20T12:55:40.296Z> || Tag: User logged in || user_id: 678a6138034fe20b4406dbe8 || user_name: test || role: team_lead

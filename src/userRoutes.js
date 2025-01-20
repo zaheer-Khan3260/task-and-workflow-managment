@@ -11,6 +11,6 @@ const router = Router();
 
 router.post('/login', loginLimiter, loginUser);
 router.post('/create', create_User);
-router.get('/', authMiddleware, getAllUsers);
+router.get('/', authMiddleware(), getAllUsers);
 
 export default router;

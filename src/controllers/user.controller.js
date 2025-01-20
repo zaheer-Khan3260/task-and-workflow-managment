@@ -11,7 +11,7 @@ export const create_User = asyncHandler(async (req, res) => {
 		throw new ApiError(400, 'All Feilds are required');
 	}
 	const existedUserName = await User.findOne({ email });
-	if (existedUserName) throw new ApiError(409, 'user Is already exist');
+	if (existedUserName) throw new ApiError(409, 'User Is already exist');
 	const user = await User.create({
 		name,
 		email,
@@ -43,10 +43,11 @@ export const loginUser = asyncHandler(async (req, res) => {
 
 	const user = await User.findOne({ email });
 
-	if (!user) res.status(400).json(new ApiResponse(400, 'User Not found'));
+	if (!user) res.status(404).json(new ApiResponse(404, 'User Not found'));
 
 	const correctPassword = await user.isPasswordCorrect(password);
-	if (!correctPassword) throw new ApiError(400, 'Password is incorrect');
+	if (!correctPassword)
+		res.status(400).json(new ApiResponse(400, 'Password is incorrect'));
 
 	const { accessToken, refreshToken } = await generateAccessAndRefereshTokens(
 		user._id
@@ -80,7 +81,7 @@ export const loginUser = asyncHandler(async (req, res) => {
 		);
 });
 
-export const getAllUsers = asyncHandler(async (req, res) => {
+export const getAllUsers = asyncHandler(async (_, res) => {
 	const users = await User.find()
 		.select('-password -refreshToken')
 		.populate('assignedTasks');
