@@ -7,7 +7,6 @@ const authMiddleware = () => {
 		const token =
 			req.cookies?.accessToken ||
 			req.header('Authorization')?.replace('Bearer ', '');
-
 		if (!token) {
 			return res
 				.status(401)
@@ -15,7 +14,7 @@ const authMiddleware = () => {
 		}
 
 		try {
-			const decoded = jwt.verify(token, process.env.JWT_SECRET);
+			const decoded = jwt.verify(token, process.env.ACCESS_TOKEN_SECRET);
 
 			const existingUser = await User.findById(decoded._id);
 			if (!existingUser) {
