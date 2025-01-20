@@ -3,6 +3,7 @@ import { ApiError } from '../utils/ApiError.js';
 import { ApiResponse } from '../utils/ApiReponse.js';
 import { asyncHandler } from '../utils/asyncHandler.js';
 import { generateAccessAndRefereshTokens } from '../dependencies/generateAccessAndRefreshToken.js';
+import { logAudit } from '../utils/auditLogger.js';
 
 export const create_User = asyncHandler(async (req, res) => {
 	const { name, email, password, role, status } = req.body;
@@ -24,6 +25,10 @@ export const create_User = asyncHandler(async (req, res) => {
 	);
 
 	if (!createdUser) throw new ApiError(500, 'Failed to create a new User');
+
+	logAudit(
+		`Tag: User created || user_id: ${createdUser._id} || user_name: ${createdUser.name} || role: ${createdUser.role}`
+	);
 
 	res.status(200).json(
 		new ApiResponse(200, createdUser, 'User created successfully')
@@ -54,6 +59,10 @@ export const loginUser = asyncHandler(async (req, res) => {
 		sameSite: 'None',
 	};
 
+	logAudit(
+		`Tag: User logged in || user_id: ${loggedInUser._id} || user_name: ${loggedInUser.name} || role: ${loggedInUser.role}`
+	);
+
 	return res
 		.status(200)
 		.cookie('accessToken', accessToken, option)
@@ -72,8 +81,12 @@ export const loginUser = asyncHandler(async (req, res) => {
 });
 
 export const getAllUsers = asyncHandler(async (req, res) => {
-	const users = await User.find().select('-password -refreshToken');
+	const users = await User.find()
+		.select('-password -refreshToken')
+		.populate('assignedTasks');
 	if (!users) throw new ApiError(404, 'No users found');
+
+	logAudit(`Tag: Fetched Users || user_count: ${users.length}`);
 
 	res.status(200).json(
 		new ApiResponse(200, users, 'All users fetched successfully')
