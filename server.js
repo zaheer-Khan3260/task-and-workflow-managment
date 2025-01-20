@@ -1,10 +1,11 @@
 import express from 'express';
 import { ApolloServer } from '@apollo/server';
-import { schema } from './src/graphql/executableSchema.js';
 import { expressMiddleware } from '@apollo/server/express4';
 import { connectDB } from './src/database/db.js';
 import authMiddleware from './src/middleware/auth.middleware.js';
 import createApiLimiter from './src/middleware/apiLimiter.js';
+import { taskResolvers } from './src/graphql/resolvers/taskResolver.js';
+import { taskTypeDefs } from './src/graphql/schema/taskSchema.js';
 import dotenv from 'dotenv';
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
@@ -28,7 +29,10 @@ app.use(cors(corsOptions));
 // Handle preflight requests explicitly
 app.options('*', cors(corsOptions));
 
-const server = new ApolloServer({ schema });
+const server = new ApolloServer({
+	typeDefs: taskTypeDefs,
+	resolvers: taskResolvers,
+});
 
 connectDB();
 (async () => {
@@ -45,19 +49,16 @@ connectDB();
 	);
 
 	app.listen(port, () => {
-		console.log(
-			`🚀 Server ready at http://localhost:${port}/graphql/tasks`
-		);
+		console.log(`🚀 Server ready at http://localhost:${port}/graphql`);
 	});
 
-	app.get('/', (req, res) => {
+	app.get('/', (_, res) => {
 		res.send('Server is up and runnig');
 	});
 })();
 
 app.use(express.json({ limit: '16kb' }));
 app.use(express.urlencoded({ extended: true, limit: '16kb' }));
-app.use(express.static('public'));
 app.use(cookieParser());
 
 import userRoutes from './src/userRoutes.js';
