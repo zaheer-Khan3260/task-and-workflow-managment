@@ -436,3 +436,4 @@
 <2025-01-20T12:45:52.045Z> || Tag: Task created || task_id: 678e4580012f5560a915e2ba || task_title: Test Task || task_description: This is a test task || task_assignedUsers: 678b47d17ba85b8d3dc301f3|| task_status: { currentStatus: 'To Do', history: [] }
 <2025-01-20T12:50:40.704Z> || Tag: Task created || task_id: 678e46a0a9b0951fa4ee0d60 || task_title: Test Task || task_description: This is a test task || task_assignedUsers: 678b47d17ba85b8d3dc301f3|| task_status: { currentStatus: 'To Do', history: [] }
 <2025-01-20T12:55:40.296Z> || Tag: User logged in || user_id: 678a6138034fe20b4406dbe8 || user_name: test || role: team_lead
+<2025-01-20T13:47:48.361Z> || Tag: Task updated || task_id: 678e46a0a9b0951fa4ee0d60 || task_title: Updated Test Task || task_description: This is an updated test task || task_assignedUsers: 678b47d17ba85b8d3dc301f3 || task_status: { currentStatus: 'To Do', history: [] }
