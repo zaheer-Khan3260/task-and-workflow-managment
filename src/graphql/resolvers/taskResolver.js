@@ -1,6 +1,8 @@
 import { Task } from '../../models/task.model.js';
 import { User } from '../../models/user.model.js';
 import { ApiError } from '../../utils/ApiError.js';
+import { logAudit } from '../../utils/auditLogger.js';
+import { hasPermission } from '../../dependencies/hasPermission.js';
 import sanitizeHtml from 'sanitize-html';
 
 export const taskResolvers = {
@@ -12,14 +14,9 @@ export const taskResolvers = {
 					throw new ApiError(401, 'Unauthorized: Please log in');
 				}
 
-				const currentUser = await User.findById(context.user._id);
-				if (!currentUser) {
-					throw new ApiError(401, 'User not found');
-				}
-
-				if (currentUser.role === 'team_member') {
+				if (context.user.role === 'team_member') {
 					const tasks = await Task.find({
-						assignedUsers: currentUser._id,
+						assignedUsers: context.user._id,
 					});
 					if (tasks.length === 0) {
 						throw new ApiError(
@@ -27,20 +24,25 @@ export const taskResolvers = {
 							'No tasks assigned to the current user'
 						);
 					}
-					return tasks.map((task) => ({
-						...task.toObject(),
-						id: task._id.toString(),
-					}));
-				} else {
-					const tasks = await Task.find();
+					logAudit(
+						`Tag: Fetched Tasks || Fetched by: ${context.user.name} user_id: ${context.user._id} || task_count: ${tasks.length}`
+					);
 					return tasks.map((task) => ({
 						...task.toObject(),
 						id: task._id.toString(),
 					}));
 				}
+				const tasks = await Task.find();
+				logAudit(
+					`Tag: Fetched Tasks || Fetched by: ${context.user.name} user_id: ${context.user._id} || task_count: ${tasks.length}`
+				);
+				return tasks.map((task) => ({
+					...task.toObject(),
+					id: task._id.toString(),
+				}));
 			} catch (error) {
 				console.error('Error fetching tasks:', error);
-				throw new ApiError(500, 'Failed to fetch tasks');
+				throw new ApiError(500, error.message);
 			}
 		},
 	},
@@ -64,20 +66,7 @@ export const taskResolvers = {
 					throw new ApiError(401, 'Unauthorized: Please log in');
 				}
 
-				const currentUser = await User.findById(context.user._id);
-				if (!currentUser) {
-					throw new ApiError(401, 'User not found');
-				}
-				if (
-					currentUser.role !== 'admin' &&
-					currentUser.role !== 'project_manager'
-				) {
-					throw new ApiError(
-						403,
-						'Forbidden: You do not have permission to create tasks'
-					);
-				}
-
+				hasPermission(context.user.role, 'createTask');
 				// Sanitize and validate inputs
 				const sanitizedTitle = sanitizeHtml(title.trim());
 				const sanitizedDescription = sanitizeHtml(description.trim());
@@ -104,10 +93,6 @@ export const taskResolvers = {
 				const validDependencies = await Task.find({
 					_id: { $in: dependencies || [] },
 				});
-				const validParentTasks = await Task.find({
-					_id: parentTaskId,
-				});
-
 				if (
 					dependencies &&
 					dependencies.length !== validDependencies.length
@@ -118,6 +103,9 @@ export const taskResolvers = {
 					);
 				}
 
+				const validParentTasks = await Task.find({
+					_id: parentTaskId,
+				});
 				if (!validParentTasks) {
 					throw new ApiError(
 						400,
@@ -141,9 +129,18 @@ export const taskResolvers = {
 				const newTask = new Task({
 					title: sanitizedTitle,
 					description: sanitizedDescription,
-					parentTaskId: validParentTasks,
-					dependencies: validDependencies.map((task) => task._id),
-					assignedUsers: validAssignedUsers.map((user) => user._id),
+					parentTaskId:
+						validParentTasks.length > 0
+							? validParentTasks[0]._id
+							: null,
+					dependencies:
+						validDependencies.length > 0
+							? validDependencies.map((task) => task._id)
+							: [],
+					assignedUsers:
+						validAssignedUsers.length > 0
+							? validAssignedUsers.map((user) => user._id)
+							: [],
 					status: { currentStatus: 'To Do', history: [] },
 					versioning: { currentVersion: 1, history: [] },
 					dueDate: sanitizedDueDate,
@@ -152,7 +149,9 @@ export const taskResolvers = {
 				});
 
 				await newTask.save();
-
+				logAudit(
+					`Tag: Task created || task_id: ${newTask._id} || task_title: ${newTask.title} || task_description: ${newTask.description} || task_assignedUsers: ${newTask.assignedUsers}|| task_status: ${newTask.status}`
+				);
 				return {
 					...newTask.toObject(),
 					id: newTask._id.toString(),
@@ -173,19 +172,7 @@ export const taskResolvers = {
 					throw new ApiError(401, 'Unauthorized: Please log in');
 				}
 
-				const currentUser = await User.findById(context.user._id);
-				if (!currentUser) {
-					throw new ApiError(401, 'User not found');
-				}
-				if (
-					currentUser.role !== 'admin' &&
-					currentUser.role !== 'project_manager'
-				) {
-					throw new ApiError(
-						403,
-						'Forbidden: You do not have permission to update tasks'
-					);
-				}
+				hasPermission(context.user.role, 'updateTask');
 
 				// Find the task
 				const task = await Task.findById(id);
@@ -208,7 +195,9 @@ export const taskResolvers = {
 				// Update the task
 				task.updatedAt = new Date();
 				await task.save();
-
+				logAudit(
+					`Tag: Task updated || task_id: ${task._id} || task_title: ${task.title} || task_description: ${task.description} || task_assignedUsers: ${task.assignedUsers} || task_status: ${task.status}`
+				);
 				return {
 					...task.toObject(),
 					id: task._id.toString(),
@@ -217,7 +206,7 @@ export const taskResolvers = {
 				console.error('Error updating task:', error);
 				throw error instanceof ApiError
 					? error
-					: new ApiError(500, 'Failed to update task');
+					: new ApiError(500, error.message);
 			}
 		},
 
@@ -227,48 +216,52 @@ export const taskResolvers = {
 					throw new ApiError(401, 'Unauthorized: Please log in');
 				}
 
-				const currentUser = await User.findById(context.user._id);
-				if (!currentUser) {
-					throw new ApiError(401, 'User not found');
-				}
-				if (
-					currentUser.role !== 'admin' &&
-					currentUser.role !== 'project_manager' &&
-					currentUser.role !== 'team_lead'
-				) {
-					throw new ApiError(
-						403,
-						'Forbidden: You do not have permission to update task status'
-					);
-				}
-
-				const task = await Task.findById(id);
+				const task = await Task.findById(id).populate(
+					'status.history.changedBy'
+				);
 				if (!task) {
 					throw new ApiError(404, 'Task not found');
+				}
+
+				if (status === 'Done' || status === 'In Progress') {
+					if (task.dependencies.length > 0) {
+						const dependencyTasks = await Task.find({
+							_id: { $in: task.dependencies },
+							'status.currentStatus': { $ne: 'Done' },
+						}).select('_id status.currentStatus');
+
+						if (dependencyTasks.length > 0) {
+							throw new ApiError(
+								400,
+								'Cannot update the status because some dependencies are not done'
+							);
+						}
+					}
 				}
 
 				if (task.status.currentStatus === status) {
 					return task;
 				}
 
-				task.status.history.push({
-					status: status,
+				task.status.history.unshift({
+					status: task.status.currentStatus,
 					changedAt: new Date(),
-					changedBy: currentUser._id,
+					changedBy: currentUser,
 				});
 				task.status.currentStatus = status;
 				await task.save();
-
+				logAudit(
+					`Tag: Updated Task Status || task_id: ${task._id} || task_title: ${task.title} || task_description: ${task.description} || task_assignedUsers: ${task.assignedUsers} || task_status: ${task.status.currentStatus}`
+				);
 				return task;
 			} catch (error) {
 				console.error('Error updating task status:', error);
 				throw error instanceof ApiError
 					? error
-					: new ApiError(500, 'Failed to update task status');
+					: new ApiError(500, error.message);
 			}
 		},
 
-		// Delete a task
 		deleteTask: async (_, { id }, context) => {
 			try {
 				// Check authentication
@@ -276,71 +269,56 @@ export const taskResolvers = {
 					throw new ApiError(401, 'Unauthorized: Please log in');
 				}
 
-				// Delete the task
-				const currentUser = await User.findById(context.user._id);
-				if (!currentUser) {
-					throw new ApiError(401, 'User not found');
-				}
-				if (
-					currentUser.role !== 'admin' &&
-					currentUser.role !== 'project_manager' &&
-					currentUser.role !== 'team_lead'
-				) {
-					throw new ApiError(
-						403,
-						'Forbidden: You do not have permission to delete tasks'
-					);
-				}
+				hasPermission(context.user.role, 'deleteTask');
 
 				const task = await Task.findByIdAndDelete(id);
 				if (!task) {
 					throw new ApiError(404, 'Task not found');
 				}
-
+				logAudit(
+					`Tag: Deleted Task || task_id: ${task._id} || task_title: ${task.title} ||task_description: ${task.description} || task_assignedUsers: ${task.assignedUsers} || task_status: ${task.status}`
+				);
 				return { success: true, id };
 			} catch (error) {
 				console.error('Error deleting task:', error);
 				throw error instanceof ApiError
 					? error
-					: new ApiError(500, 'Failed to delete task');
+					: new ApiError(500, error.message);
 			}
 		},
 
-		assignTask: async (_, { id, assignedUsers }, context) => {
+		assignTask: async (_, { id, userIds }, context) => {
 			try {
 				if (!context.user) {
 					throw new ApiError(401, 'Unauthorized: Please log in');
 				}
 
-				const currentUser = await User.findById(context.user._id);
-				if (!currentUser) {
-					throw new ApiError(401, 'User not found');
-				}
-				if (
-					currentUser.role !== 'admin' &&
-					currentUser.role !== 'project_manager' &&
-					currentUser.role !== 'team_lead'
-				) {
-					throw new ApiError(
-						403,
-						'Forbidden: You do not have permission to assign tasks'
-					);
-				}
+				hasPermission(context.user.role, 'assignTask');
 
-				const task = await Task.findById(id);
+				const task = await Task.findById(id).populate('assignedUsers');
 				if (!task) {
 					throw new ApiError(404, 'Task not found');
 				}
 
-				task.assignedUsers = assignedUsers;
-				await task.save();
+				userIds?.forEach(async (user) => {
+					const newUser = await User.findById(user);
+					if (newUser) {
+						newUser.assignedTasks.push(task._id.toString());
+						await newUser.save();
+					}
+					task.assignedUsers.push(newUser);
+				});
 
+				await task.save();
+				logAudit(
+					`Tag: Assigned Task || task_id: ${task._id} || task_title: ${task.title} || task_description: ${task.description} || task_assignedUsers: ${task.assignedUsers} || task_status: ${task.status}`
+				);
 				return task;
 			} catch (error) {
 				console.error('Error assigning task:', error);
 				throw error instanceof ApiError
 					? error
-					: new ApiError(500, 'Failed to assign task');
+					: new ApiError(500, error.message);
 			}
 		},
 
@@ -350,21 +328,7 @@ export const taskResolvers = {
 					throw new ApiError(401, 'Unauthorized: Please log in');
 				}
 
-				const currentUser = await User.findById(context.user._id);
-				if (!currentUser) {
-					throw new ApiError(401, 'User not found');
-				}
-				if (
-					currentUser.role !== 'admin' &&
-					currentUser.role !== 'project_manager' &&
-					currentUser.role !== 'team_lead'
-				) {
-					throw new ApiError(
-						403,
-						'Forbidden: You do not have permission to add dependencies'
-					);
-				}
-
+				hasPermission(context.user.role, 'addDependency');
 				const task = await Task.findById(id);
 				if (!task) {
 					throw new ApiError(404, 'Task not found');
@@ -375,15 +339,36 @@ export const taskResolvers = {
 					throw new ApiError(404, 'Dependency task not found');
 				}
 
+				if (task.dependencies.includes(dependencyTaskId)) {
+					throw new ApiError(
+						400,
+						'This dependency is already added to the task'
+					);
+				}
+				if (dependencyTask.dependencies.includes(id)) {
+					throw new ApiError(
+						400,
+						'Circular dependency detected: A task cannot depend on itself'
+					);
+				}
+
 				task.dependencies.push(dependencyTaskId);
 				await task.save();
-
-				return task;
+				logAudit(
+					`Tag: Added Dependency || task_id: ${task._id} || task_title: ${task.title} || task_description: ${task.description} || task_assignedUsers: ${task.assignedUsers} || task_status: ${task.status} `
+				);
+				return {
+					...task.toObject(),
+					id: task._id.toString(),
+					dependencies: task.dependencies.map((dep) =>
+						dep.toString()
+					),
+				};
 			} catch (error) {
 				console.error('Error adding dependency:', error);
 				throw error instanceof ApiError
 					? error
-					: new ApiError(500, 'Failed to add dependency');
+					: new ApiError(500, error.message);
 			}
 		},
 	},
