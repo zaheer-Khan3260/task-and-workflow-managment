@@ -12,7 +12,7 @@ describe('Login User', () => {
 			.post('/api/users/login')
 			.send({ email: 'testuser1@gmail.com', password: '123456789' });
 		expect(response.status).toBe(200);
-		expect(response.body.message).toBe('User logged in Successfully');
+		expect(response.body.message).toBe('User logged in successfully');
 	});
 });
 
@@ -28,8 +28,9 @@ describe('Login User: If User Not Found', () => {
 			email: 'testuser10@gmail.com',
 			password: '123456789',
 		});
+		console.log(response);
 		expect(response.status).toBe(404);
-		expect(response.body.data).toBe('User Not found');
+		expect(response.body.message).toBe('User not found');
 	});
 });
 
@@ -45,7 +46,8 @@ describe('Login User: If Password is Incorrect', () => {
 			email: 'testuser1@gmail.com',
 			password: '12345',
 		});
+		// console.log(response);
 		expect(response.status).toBe(400);
-		expect(response.body.data).toBe('Password is incorrect');
+		expect(response.body.message).toBe('Password is incorrect');
 	});
 });
