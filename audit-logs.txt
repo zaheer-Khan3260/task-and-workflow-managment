@@ -437,3 +437,448 @@
 <2025-01-20T12:50:40.704Z> || Tag: Task created || task_id: 678e46a0a9b0951fa4ee0d60 || task_title: Test Task || task_description: This is a test task || task_assignedUsers: 678b47d17ba85b8d3dc301f3|| task_status: { currentStatus: 'To Do', history: [] }
 <2025-01-20T12:55:40.296Z> || Tag: User logged in || user_id: 678a6138034fe20b4406dbe8 || user_name: test || role: team_lead
 <2025-01-20T13:47:48.361Z> || Tag: Task updated || task_id: 678e46a0a9b0951fa4ee0d60 || task_title: Updated Test Task || task_description: This is an updated test task || task_assignedUsers: 678b47d17ba85b8d3dc301f3 || task_status: { currentStatus: 'To Do', history: [] }
+<2025-01-21T04:20:30.726Z> || Tag: Task updated || task_id: 678e46a0a9b0951fa4ee0d60 || task_title: Updated Test Task || task_description: This is an updated test task || task_assignedUsers: 678b47d17ba85b8d3dc301f3 || task_status: { currentStatus: 'To Do', history: [] }
+<2025-01-21T04:23:10.072Z> || Tag: User logged in || user_id: 678a6138034fe20b4406dbe8 || user_name: test || role: team_lead
+<2025-01-21T04:37:00.753Z> || Tag: Fetched Tasks || Fetched by: test user_id: 678a60e0034fe20b4406dbe4 || task_count: 8
+<2025-01-21T04:39:36.679Z> || Tag: Fetched Tasks || Fetched by: test user_id: 678a60e0034fe20b4406dbe4 || task_count: 8
+<2025-01-21T04:41:35.654Z> || Tag: Fetched Tasks || Fetched by: test user_id: 678a60e0034fe20b4406dbe4 || task_count: 8
+<2025-01-21T04:42:20.107Z> || Tag: Fetched Tasks || Fetched by: test user_id: 678a60e0034fe20b4406dbe4 || task_count: 8
+<2025-01-21T04:45:59.264Z> || Tag: Fetched Tasks || Fetched by: test user_id: 678a60e0034fe20b4406dbe4 || task_count: 8
+<2025-01-21T04:45:59.704Z> || Tag: Fetched Tasks || Fetched by: test user_id: 678b5b872d3db633dd08bd48 || task_count: 8
+<2025-01-21T04:46:27.045Z> || Tag: Fetched Tasks || Fetched by: test user_id: 678a60e0034fe20b4406dbe4 || task_count: 8
+<2025-01-21T04:46:27.493Z> || Tag: Fetched Tasks || Fetched by: test user_id: 678b5b872d3db633dd08bd48 || task_count: 8
+<2025-01-21T04:47:03.008Z> || Tag: Fetched Tasks || Fetched by: test user_id: 678a60e0034fe20b4406dbe4 || task_count: 8
+<2025-01-21T04:47:03.459Z> || Tag: Fetched Tasks || Fetched by: test user_id: 678b5b872d3db633dd08bd48 || task_count: 8
+<2025-01-21T04:47:03.712Z> || Tag: Fetched Tasks || Fetched by: test user_id: 678a6138034fe20b4406dbe8 || task_count: 8
+<2025-01-21T04:52:28.926Z> || Tag: Fetched Tasks || Fetched by: test user_id: 678a60e0034fe20b4406dbe4 || task_count: 8
+<2025-01-21T04:52:29.343Z> || Tag: Fetched Tasks || Fetched by: test user_id: 678b5b872d3db633dd08bd48 || task_count: 8
+<2025-01-21T04:52:29.604Z> || Tag: Fetched Tasks || Fetched by: test user_id: 678a6138034fe20b4406dbe8 || task_count: 8
+<2025-01-21T04:52:29.950Z> || Tag: Fetched Tasks || Fetched by: test user_id: 678b46d1213f9efb4fa4ed40 || task_count: 2
+<2025-01-21T04:55:08.532Z> || Tag: Fetched Tasks || Fetched by: test user_id: 678a60e0034fe20b4406dbe4 || task_count: 8
+<2025-01-21T04:55:08.980Z> || Tag: Fetched Tasks || Fetched by: test user_id: 678b5b872d3db633dd08bd48 || task_count: 8
+<2025-01-21T04:55:09.249Z> || Tag: Fetched Tasks || Fetched by: test user_id: 678a6138034fe20b4406dbe8 || task_count: 8
+<2025-01-21T04:55:09.580Z> || Tag: Fetched Tasks || Fetched by: test user_id: 678b46d1213f9efb4fa4ed40 || task_count: 2
+<2025-01-21T04:55:57.986Z> || Tag: Fetched Tasks || Fetched by: test user_id: 678a60e0034fe20b4406dbe4 || task_count: 8
+<2025-01-21T04:55:58.437Z> || Tag: Fetched Tasks || Fetched by: test user_id: 678b5b872d3db633dd08bd48 || task_count: 8
+<2025-01-21T04:55:58.689Z> || Tag: Fetched Tasks || Fetched by: test user_id: 678a6138034fe20b4406dbe8 || task_count: 8
+<2025-01-21T04:55:59.027Z> || Tag: Fetched Tasks || Fetched by: test user_id: 678b46d1213f9efb4fa4ed40 || task_count: 2
+<2025-01-21T04:56:26.513Z> || Tag: Fetched Tasks || Fetched by: test user_id: 678a60e0034fe20b4406dbe4 || task_count: 8
+<2025-01-21T04:56:26.967Z> || Tag: Fetched Tasks || Fetched by: test user_id: 678b5b872d3db633dd08bd48 || task_count: 8
+<2025-01-21T04:56:27.226Z> || Tag: Fetched Tasks || Fetched by: test user_id: 678a6138034fe20b4406dbe8 || task_count: 8
+<2025-01-21T04:56:27.526Z> || Tag: Fetched Tasks || Fetched by: test user_id: 678b46d1213f9efb4fa4ed40 || task_count: 2
+<2025-01-21T05:03:44.582Z> || Tag: Fetched Tasks || Fetched by: test user_id: 678b5b872d3db633dd08bd48 || task_count: 8
+<2025-01-21T05:03:44.985Z> || Tag: Fetched Tasks || Fetched by: test user_id: 678a6138034fe20b4406dbe8 || task_count: 8
+<2025-01-21T05:03:45.236Z> || Tag: Fetched Tasks || Fetched by: test user_id: 678b46d1213f9efb4fa4ed40 || task_count: 2
+<2025-01-21T05:09:35.643Z> || Tag: Fetched Tasks || Fetched by: test user_id: 678a60e0034fe20b4406dbe4 || task_count: 8
+<2025-01-21T05:09:36.114Z> || Tag: Fetched Tasks || Fetched by: test user_id: 678b5b872d3db633dd08bd48 || task_count: 8
+<2025-01-21T05:09:36.378Z> || Tag: Fetched Tasks || Fetched by: test user_id: 678a6138034fe20b4406dbe8 || task_count: 8
+<2025-01-21T05:09:36.660Z> || Tag: Fetched Tasks || Fetched by: test user_id: 678b46d1213f9efb4fa4ed40 || task_count: 2
+<2025-01-21T05:30:50.219Z> || Tag: Updated Task Status || task_id: 678ded163e2afccb335d481b || task_title: complete the frontend of dashboard || task_description: complete the frontend before EOD and submit to dheeraj || task_assignedUsers: 678b47874bc3ddd8cfcc1c4d || task_status: In Progress
+<2025-01-21T05:37:05.530Z> || Tag: Updated Task Status || task_id: 678b531732c2c9ab26b37181 || task_title: complete the payment gatway integration || task_description: intergrat the razorpay payment gatway in the backend so user can make payment and take a subscription of our product || task_assignedUsers: 678b47874bc3ddd8cfcc1c4d || task_status: Done
+<2025-01-21T05:38:46.849Z> || Tag: Updated Task Status || task_id: 678b56a3ff4f1ad14bcd2cc6 || task_title: complete the payment gatway integration || task_description: intergrat the razorpay payment gatway in the backend so user can make payment and take a subscription of our product || task_assignedUsers: 678b47874bc3ddd8cfcc1c4d,678b47d17ba85b8d3dc301f3,678b46d1213f9efb4fa4ed40 || task_status: Done
+<2025-01-21T05:43:49.736Z> || Tag: Updated Task Status || task_id: 678ded6e80cbfb55ce4d02f7 || task_title: complete the frontend of dashboard || task_description: complete the frontend before EOD and submit to dheeraj || task_assignedUsers: 678b47874bc3ddd8cfcc1c4d || task_status: In Progress
+<2025-01-21T05:44:43.856Z> || Tag: Updated Task Status || task_id: 678deedb17858a8c16864687 || task_title: complete the frontend of dashboard || task_description: complete the frontend before EOD and submit to dheeraj || task_assignedUsers: 678b47874bc3ddd8cfcc1c4d || task_status: In Progress
+<2025-01-21T05:53:17.909Z> || Tag: Updated Task Status || task_id: 678b531732c2c9ab26b37181 || task_title: complete the payment gatway integration || task_description: intergrat the razorpay payment gatway in the backend so user can make payment and take a subscription of our product || task_assignedUsers: 678b47874bc3ddd8cfcc1c4d || task_status: Done
+<2025-01-21T05:53:18.055Z> || Tag: Updated Task Status || task_id: 678b56a3ff4f1ad14bcd2cc6 || task_title: complete the payment gatway integration || task_description: intergrat the razorpay payment gatway in the backend so user can make payment and take a subscription of our product || task_assignedUsers: 678b47874bc3ddd8cfcc1c4d,678b47d17ba85b8d3dc301f3,678b46d1213f9efb4fa4ed40 || task_status: Done
+<2025-01-21T05:53:18.194Z> || Tag: Updated Task Status || task_id: 678b531732c2c9ab26b37181 || task_title: complete the payment gatway integration || task_description: intergrat the razorpay payment gatway in the backend so user can make payment and take a subscription of our product || task_assignedUsers: 678b47874bc3ddd8cfcc1c4d || task_status: In Progress
+<2025-01-21T05:55:38.471Z> || Tag: Updated Task Status || task_id: 678b531732c2c9ab26b37181 || task_title: complete the payment gatway integration || task_description: intergrat the razorpay payment gatway in the backend so user can make payment and take a subscription of our product || task_assignedUsers: 678b47874bc3ddd8cfcc1c4d || task_status: Done
+<2025-01-21T05:55:38.780Z> || Tag: Updated Task Status || task_id: 678b531732c2c9ab26b37181 || task_title: complete the payment gatway integration || task_description: intergrat the razorpay payment gatway in the backend so user can make payment and take a subscription of our product || task_assignedUsers: 678b47874bc3ddd8cfcc1c4d || task_status: In Progress
+<2025-01-21T05:55:41.283Z> || Tag: Updated Task Status || task_id: 678b531732c2c9ab26b37181 || task_title: complete the payment gatway integration || task_description: intergrat the razorpay payment gatway in the backend so user can make payment and take a subscription of our product || task_assignedUsers: 678b47874bc3ddd8cfcc1c4d || task_status: Done
+<2025-01-21T05:55:41.583Z> || Tag: Updated Task Status || task_id: 678b531732c2c9ab26b37181 || task_title: complete the payment gatway integration || task_description: intergrat the razorpay payment gatway in the backend so user can make payment and take a subscription of our product || task_assignedUsers: 678b47874bc3ddd8cfcc1c4d || task_status: In Progress
+<2025-01-21T05:55:44.147Z> || Tag: Updated Task Status || task_id: 678b531732c2c9ab26b37181 || task_title: complete the payment gatway integration || task_description: intergrat the razorpay payment gatway in the backend so user can make payment and take a subscription of our product || task_assignedUsers: 678b47874bc3ddd8cfcc1c4d || task_status: Done
+<2025-01-21T05:55:44.451Z> || Tag: Updated Task Status || task_id: 678b531732c2c9ab26b37181 || task_title: complete the payment gatway integration || task_description: intergrat the razorpay payment gatway in the backend so user can make payment and take a subscription of our product || task_assignedUsers: 678b47874bc3ddd8cfcc1c4d || task_status: In Progress
+<2025-01-21T06:02:28.730Z> || Tag: Deleted Task || task_id: 678e4580012f5560a915e2ba || task_title: Test Task ||task_description: This is a test task || task_assignedUsers: 678b47d17ba85b8d3dc301f3 || task_status: { currentStatus: 'To Do', history: [] }
+<2025-01-21T06:15:03.025Z> || Tag: Assigned Task || task_id: 678e46a0a9b0951fa4ee0d60 || task_title: Updated Test Task || task_description: This is an updated test task || task_assignedUsers: {
+  _id: new ObjectId('678b47d17ba85b8d3dc301f3'),
+  name: 'test',
+  email: 'test5@gmail.com',
+  password: '$2b$10$Ky1jb06QZaaEnZlNpXJN5u68SNvuGOH/qMDCGOEScd0UbZ/qbLucu',
+  role: 'team_member',
+  assignedTasks: [ new ObjectId('678b56a3ff4f1ad14bcd2cc6') ],
+  status: 'active',
+  createdAt: 2025-01-18T06:18:57.849Z,
+  updatedAt: 2025-01-18T11:40:14.499Z,
+  __v: 1
+} || task_status: { currentStatus: 'To Do', history: [] }
+<2025-01-21T06:15:14.756Z> || Tag: Assigned Task || task_id: 678e46a0a9b0951fa4ee0d60 || task_title: Updated Test Task || task_description: This is an updated test task || task_assignedUsers: {
+  _id: new ObjectId('678b47d17ba85b8d3dc301f3'),
+  name: 'test',
+  email: 'test5@gmail.com',
+  password: '$2b$10$Ky1jb06QZaaEnZlNpXJN5u68SNvuGOH/qMDCGOEScd0UbZ/qbLucu',
+  role: 'team_member',
+  assignedTasks: [ new ObjectId('678b56a3ff4f1ad14bcd2cc6') ],
+  status: 'active',
+  createdAt: 2025-01-18T06:18:57.849Z,
+  updatedAt: 2025-01-18T11:40:14.499Z,
+  __v: 1
+} || task_status: { currentStatus: 'To Do', history: [] }
+<2025-01-21T06:20:19.893Z> || Tag: Assigned Task || task_id: 678e46a0a9b0951fa4ee0d60 || task_title: Updated Test Task || task_description: This is an updated test task || task_assignedUsers: {
+  _id: new ObjectId('678b47d17ba85b8d3dc301f3'),
+  name: 'test',
+  email: 'test5@gmail.com',
+  password: '$2b$10$Ky1jb06QZaaEnZlNpXJN5u68SNvuGOH/qMDCGOEScd0UbZ/qbLucu',
+  role: 'team_member',
+  assignedTasks: [ new ObjectId('678b56a3ff4f1ad14bcd2cc6') ],
+  status: 'active',
+  createdAt: 2025-01-18T06:18:57.849Z,
+  updatedAt: 2025-01-18T11:40:14.499Z,
+  __v: 1
+} || task_status: { currentStatus: 'To Do', history: [] }
+<2025-01-21T06:22:32.100Z> || Tag: Assigned Task || task_id: 678e46a0a9b0951fa4ee0d60 || task_title: Updated Test Task || task_description: This is an updated test task || task_assignedUsers: {
+  _id: new ObjectId('678b47d17ba85b8d3dc301f3'),
+  name: 'test',
+  email: 'test5@gmail.com',
+  password: '$2b$10$Ky1jb06QZaaEnZlNpXJN5u68SNvuGOH/qMDCGOEScd0UbZ/qbLucu',
+  role: 'team_member',
+  assignedTasks: [ new ObjectId('678b56a3ff4f1ad14bcd2cc6') ],
+  status: 'active',
+  createdAt: 2025-01-18T06:18:57.849Z,
+  updatedAt: 2025-01-18T11:40:14.499Z,
+  __v: 1
+},{
+  name: 'testuser3',
+  email: 'testuser3@gmail.com',
+  password: '$2b$10$Cr9LUq6vLmQT1bGh0lE3fOW0ffKmvyjjCYDaZcGzuQmTtAg07p1Ny',
+  role: 'team_member',
+  assignedTasks: [
+    new ObjectId('678e46a0a9b0951fa4ee0d60'),
+    new ObjectId('678e46a0a9b0951fa4ee0d60'),
+    new ObjectId('678e46a0a9b0951fa4ee0d60'),
+    new ObjectId('678e46a0a9b0951fa4ee0d60')
+  ],
+  status: 'active',
+  _id: new ObjectId('678e235d9edd5ace32f49096'),
+  createdAt: 2025-01-20T10:20:13.319Z,
+  updatedAt: 2025-01-21T06:22:32.032Z,
+  __v: 4
+},{
+  name: 'testuser2',
+  email: 'testuser2@gmail.com',
+  password: '$2b$10$8dw6E8xrLA8Uu07ONdGD8.DrfR.qQcfybgZ5fwE8UuxZSszP7GzH6',
+  role: 'team_member',
+  assignedTasks: [
+    new ObjectId('678e46a0a9b0951fa4ee0d60'),
+    new ObjectId('678e46a0a9b0951fa4ee0d60'),
+    new ObjectId('678e46a0a9b0951fa4ee0d60'),
+    new ObjectId('678e46a0a9b0951fa4ee0d60')
+  ],
+  status: 'active',
+  _id: new ObjectId('678e1c7f04076800f7357997'),
+  createdAt: 2025-01-20T09:50:55.033Z,
+  updatedAt: 2025-01-21T06:22:32.038Z,
+  __v: 4
+} || task_status: { currentStatus: 'To Do', history: [] }
+<2025-01-21T06:31:08.979Z> || Tag: Assigned Task || task_id: 678e46a0a9b0951fa4ee0d60 || task_title: Updated Test Task || task_description: This is an updated test task || task_assignedUsers: {
+  _id: new ObjectId('678b47d17ba85b8d3dc301f3'),
+  name: 'test',
+  email: 'test5@gmail.com',
+  password: '$2b$10$Ky1jb06QZaaEnZlNpXJN5u68SNvuGOH/qMDCGOEScd0UbZ/qbLucu',
+  role: 'team_member',
+  assignedTasks: [ new ObjectId('678b56a3ff4f1ad14bcd2cc6') ],
+  status: 'active',
+  createdAt: 2025-01-18T06:18:57.849Z,
+  updatedAt: 2025-01-18T11:40:14.499Z,
+  __v: 1
+},{
+  _id: new ObjectId('678e235d9edd5ace32f49096'),
+  name: 'testuser3',
+  email: 'testuser3@gmail.com',
+  password: '$2b$10$Cr9LUq6vLmQT1bGh0lE3fOW0ffKmvyjjCYDaZcGzuQmTtAg07p1Ny',
+  role: 'team_member',
+  assignedTasks: [
+    new ObjectId('678e46a0a9b0951fa4ee0d60'),
+    new ObjectId('678e46a0a9b0951fa4ee0d60'),
+    new ObjectId('678e46a0a9b0951fa4ee0d60'),
+    new ObjectId('678e46a0a9b0951fa4ee0d60')
+  ],
+  status: 'active',
+  createdAt: 2025-01-20T10:20:13.319Z,
+  updatedAt: 2025-01-21T06:22:32.032Z,
+  __v: 4
+},{
+  _id: new ObjectId('678e1c7f04076800f7357997'),
+  name: 'testuser2',
+  email: 'testuser2@gmail.com',
+  password: '$2b$10$8dw6E8xrLA8Uu07ONdGD8.DrfR.qQcfybgZ5fwE8UuxZSszP7GzH6',
+  role: 'team_member',
+  assignedTasks: [
+    new ObjectId('678e46a0a9b0951fa4ee0d60'),
+    new ObjectId('678e46a0a9b0951fa4ee0d60'),
+    new ObjectId('678e46a0a9b0951fa4ee0d60'),
+    new ObjectId('678e46a0a9b0951fa4ee0d60')
+  ],
+  status: 'active',
+  createdAt: 2025-01-20T09:50:55.033Z,
+  updatedAt: 2025-01-21T06:22:32.038Z,
+  __v: 4
+},{
+  name: 'testuser3',
+  email: 'testuser3@gmail.com',
+  password: '$2b$10$Cr9LUq6vLmQT1bGh0lE3fOW0ffKmvyjjCYDaZcGzuQmTtAg07p1Ny',
+  role: 'team_member',
+  assignedTasks: [
+    new ObjectId('678e46a0a9b0951fa4ee0d60'),
+    new ObjectId('678e46a0a9b0951fa4ee0d60'),
+    new ObjectId('678e46a0a9b0951fa4ee0d60'),
+    new ObjectId('678e46a0a9b0951fa4ee0d60'),
+    new ObjectId('678e46a0a9b0951fa4ee0d60')
+  ],
+  status: 'active',
+  _id: new ObjectId('678e235d9edd5ace32f49096'),
+  createdAt: 2025-01-20T10:20:13.319Z,
+  updatedAt: 2025-01-21T06:31:08.919Z,
+  __v: 5
+},{
+  name: 'testuser2',
+  email: 'testuser2@gmail.com',
+  password: '$2b$10$8dw6E8xrLA8Uu07ONdGD8.DrfR.qQcfybgZ5fwE8UuxZSszP7GzH6',
+  role: 'team_member',
+  assignedTasks: [
+    new ObjectId('678e46a0a9b0951fa4ee0d60'),
+    new ObjectId('678e46a0a9b0951fa4ee0d60'),
+    new ObjectId('678e46a0a9b0951fa4ee0d60'),
+    new ObjectId('678e46a0a9b0951fa4ee0d60'),
+    new ObjectId('678e46a0a9b0951fa4ee0d60')
+  ],
+  status: 'active',
+  _id: new ObjectId('678e1c7f04076800f7357997'),
+  createdAt: 2025-01-20T09:50:55.033Z,
+  updatedAt: 2025-01-21T06:31:08.924Z,
+  __v: 5
+} || task_status: { currentStatus: 'To Do', history: [] }
+<2025-01-21T06:42:37.150Z> || Tag: Assigned Task || task_id: 678e46a0a9b0951fa4ee0d60 || task_title: Updated Test Task || task_description: This is an updated test task || task_assignedUsers: {
+  _id: new ObjectId('678b47d17ba85b8d3dc301f3'),
+  name: 'test',
+  email: 'test5@gmail.com',
+  password: '$2b$10$Ky1jb06QZaaEnZlNpXJN5u68SNvuGOH/qMDCGOEScd0UbZ/qbLucu',
+  role: 'team_member',
+  assignedTasks: [ new ObjectId('678b56a3ff4f1ad14bcd2cc6') ],
+  status: 'active',
+  createdAt: 2025-01-18T06:18:57.849Z,
+  updatedAt: 2025-01-18T11:40:14.499Z,
+  __v: 1
+},{
+  _id: new ObjectId('678e235d9edd5ace32f49096'),
+  name: 'testuser3',
+  email: 'testuser3@gmail.com',
+  password: '$2b$10$Cr9LUq6vLmQT1bGh0lE3fOW0ffKmvyjjCYDaZcGzuQmTtAg07p1Ny',
+  role: 'team_member',
+  assignedTasks: [
+    new ObjectId('678e46a0a9b0951fa4ee0d60'),
+    new ObjectId('678e46a0a9b0951fa4ee0d60'),
+    new ObjectId('678e46a0a9b0951fa4ee0d60'),
+    new ObjectId('678e46a0a9b0951fa4ee0d60'),
+    new ObjectId('678e46a0a9b0951fa4ee0d60')
+  ],
+  status: 'active',
+  createdAt: 2025-01-20T10:20:13.319Z,
+  updatedAt: 2025-01-21T06:31:08.919Z,
+  __v: 5
+},{
+  _id: new ObjectId('678e1c7f04076800f7357997'),
+  name: 'testuser2',
+  email: 'testuser2@gmail.com',
+  password: '$2b$10$8dw6E8xrLA8Uu07ONdGD8.DrfR.qQcfybgZ5fwE8UuxZSszP7GzH6',
+  role: 'team_member',
+  assignedTasks: [
+    new ObjectId('678e46a0a9b0951fa4ee0d60'),
+    new ObjectId('678e46a0a9b0951fa4ee0d60'),
+    new ObjectId('678e46a0a9b0951fa4ee0d60'),
+    new ObjectId('678e46a0a9b0951fa4ee0d60'),
+    new ObjectId('678e46a0a9b0951fa4ee0d60')
+  ],
+  status: 'active',
+  createdAt: 2025-01-20T09:50:55.033Z,
+  updatedAt: 2025-01-21T06:31:08.924Z,
+  __v: 5
+},{
+  name: 'test',
+  email: 'test1@gmail.com',
+  password: '$2b$10$yhgiuX2kRSI0.dIAOOMuY.ZTsj1fca3fecydcWznPXT.D4mxG9Kvi',
+  role: 'admin',
+  assignedTasks: [ new ObjectId('678e46a0a9b0951fa4ee0d60') ],
+  refreshToken: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzhhNjBlMDAzNGZlMjBiNDQwNmRiZTQiLCJpYXQiOjE3MzczNzQxMzIsImV4cCI6MTczODIzODEzMn0.ZnapSTXJ3XWQOVEM5ZBVE1f7zd858qADjM8gVp4UgfY',
+  status: 'active',
+  _id: new ObjectId('678a60e0034fe20b4406dbe4'),
+  createdAt: 2025-01-17T13:53:36.131Z,
+  updatedAt: 2025-01-21T06:42:37.085Z,
+  __v: 1
+} || task_status: { currentStatus: 'To Do', history: [] }
+<2025-01-21T06:44:46.382Z> || Tag: Assigned Task || task_id: 678e46a0a9b0951fa4ee0d60 || task_title: Updated Test Task || task_description: This is an updated test task || task_assignedUsers: {
+  _id: new ObjectId('678b47d17ba85b8d3dc301f3'),
+  name: 'test',
+  email: 'test5@gmail.com',
+  password: '$2b$10$Ky1jb06QZaaEnZlNpXJN5u68SNvuGOH/qMDCGOEScd0UbZ/qbLucu',
+  role: 'team_member',
+  assignedTasks: [ new ObjectId('678b56a3ff4f1ad14bcd2cc6') ],
+  status: 'active',
+  createdAt: 2025-01-18T06:18:57.849Z,
+  updatedAt: 2025-01-18T11:40:14.499Z,
+  __v: 1
+},{
+  _id: new ObjectId('678e235d9edd5ace32f49096'),
+  name: 'testuser3',
+  email: 'testuser3@gmail.com',
+  password: '$2b$10$Cr9LUq6vLmQT1bGh0lE3fOW0ffKmvyjjCYDaZcGzuQmTtAg07p1Ny',
+  role: 'team_member',
+  assignedTasks: [
+    new ObjectId('678e46a0a9b0951fa4ee0d60'),
+    new ObjectId('678e46a0a9b0951fa4ee0d60'),
+    new ObjectId('678e46a0a9b0951fa4ee0d60'),
+    new ObjectId('678e46a0a9b0951fa4ee0d60'),
+    new ObjectId('678e46a0a9b0951fa4ee0d60')
+  ],
+  status: 'active',
+  createdAt: 2025-01-20T10:20:13.319Z,
+  updatedAt: 2025-01-21T06:31:08.919Z,
+  __v: 5
+},{
+  _id: new ObjectId('678e1c7f04076800f7357997'),
+  name: 'testuser2',
+  email: 'testuser2@gmail.com',
+  password: '$2b$10$8dw6E8xrLA8Uu07ONdGD8.DrfR.qQcfybgZ5fwE8UuxZSszP7GzH6',
+  role: 'team_member',
+  assignedTasks: [
+    new ObjectId('678e46a0a9b0951fa4ee0d60'),
+    new ObjectId('678e46a0a9b0951fa4ee0d60'),
+    new ObjectId('678e46a0a9b0951fa4ee0d60'),
+    new ObjectId('678e46a0a9b0951fa4ee0d60'),
+    new ObjectId('678e46a0a9b0951fa4ee0d60')
+  ],
+  status: 'active',
+  createdAt: 2025-01-20T09:50:55.033Z,
+  updatedAt: 2025-01-21T06:31:08.924Z,
+  __v: 5
+},{
+  name: 'test',
+  email: 'test1@gmail.com',
+  password: '$2b$10$yhgiuX2kRSI0.dIAOOMuY.ZTsj1fca3fecydcWznPXT.D4mxG9Kvi',
+  role: 'admin',
+  assignedTasks: [
+    new ObjectId('678e46a0a9b0951fa4ee0d60'),
+    new ObjectId('678e46a0a9b0951fa4ee0d60')
+  ],
+  refreshToken: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzhhNjBlMDAzNGZlMjBiNDQwNmRiZTQiLCJpYXQiOjE3MzczNzQxMzIsImV4cCI6MTczODIzODEzMn0.ZnapSTXJ3XWQOVEM5ZBVE1f7zd858qADjM8gVp4UgfY',
+  status: 'active',
+  _id: new ObjectId('678a60e0034fe20b4406dbe4'),
+  createdAt: 2025-01-17T13:53:36.131Z,
+  updatedAt: 2025-01-21T06:44:46.323Z,
+  __v: 2
+} || task_status: { currentStatus: 'To Do', history: [] }
+<2025-01-21T06:46:09.665Z> || Tag: Assigned Task || task_id: 678e46a0a9b0951fa4ee0d60 || task_title: Updated Test Task || task_description: This is an updated test task || task_assignedUsers: {
+  _id: new ObjectId('678b47d17ba85b8d3dc301f3'),
+  name: 'test',
+  email: 'test5@gmail.com',
+  password: '$2b$10$Ky1jb06QZaaEnZlNpXJN5u68SNvuGOH/qMDCGOEScd0UbZ/qbLucu',
+  role: 'team_member',
+  assignedTasks: [ new ObjectId('678b56a3ff4f1ad14bcd2cc6') ],
+  status: 'active',
+  createdAt: 2025-01-18T06:18:57.849Z,
+  updatedAt: 2025-01-18T11:40:14.499Z,
+  __v: 1
+},{
+  _id: new ObjectId('678e235d9edd5ace32f49096'),
+  name: 'testuser3',
+  email: 'testuser3@gmail.com',
+  password: '$2b$10$Cr9LUq6vLmQT1bGh0lE3fOW0ffKmvyjjCYDaZcGzuQmTtAg07p1Ny',
+  role: 'team_member',
+  assignedTasks: [
+    new ObjectId('678e46a0a9b0951fa4ee0d60'),
+    new ObjectId('678e46a0a9b0951fa4ee0d60'),
+    new ObjectId('678e46a0a9b0951fa4ee0d60'),
+    new ObjectId('678e46a0a9b0951fa4ee0d60'),
+    new ObjectId('678e46a0a9b0951fa4ee0d60')
+  ],
+  status: 'active',
+  createdAt: 2025-01-20T10:20:13.319Z,
+  updatedAt: 2025-01-21T06:31:08.919Z,
+  __v: 5
+},{
+  _id: new ObjectId('678e1c7f04076800f7357997'),
+  name: 'testuser2',
+  email: 'testuser2@gmail.com',
+  password: '$2b$10$8dw6E8xrLA8Uu07ONdGD8.DrfR.qQcfybgZ5fwE8UuxZSszP7GzH6',
+  role: 'team_member',
+  assignedTasks: [
+    new ObjectId('678e46a0a9b0951fa4ee0d60'),
+    new ObjectId('678e46a0a9b0951fa4ee0d60'),
+    new ObjectId('678e46a0a9b0951fa4ee0d60'),
+    new ObjectId('678e46a0a9b0951fa4ee0d60'),
+    new ObjectId('678e46a0a9b0951fa4ee0d60')
+  ],
+  status: 'active',
+  createdAt: 2025-01-20T09:50:55.033Z,
+  updatedAt: 2025-01-21T06:31:08.924Z,
+  __v: 5
+},{
+  name: 'test',
+  email: 'test1@gmail.com',
+  password: '$2b$10$yhgiuX2kRSI0.dIAOOMuY.ZTsj1fca3fecydcWznPXT.D4mxG9Kvi',
+  role: 'admin',
+  assignedTasks: [
+    new ObjectId('678e46a0a9b0951fa4ee0d60'),
+    new ObjectId('678e46a0a9b0951fa4ee0d60'),
+    new ObjectId('678e46a0a9b0951fa4ee0d60')
+  ],
+  refreshToken: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzhhNjBlMDAzNGZlMjBiNDQwNmRiZTQiLCJpYXQiOjE3MzczNzQxMzIsImV4cCI6MTczODIzODEzMn0.ZnapSTXJ3XWQOVEM5ZBVE1f7zd858qADjM8gVp4UgfY',
+  status: 'active',
+  _id: new ObjectId('678a60e0034fe20b4406dbe4'),
+  createdAt: 2025-01-17T13:53:36.131Z,
+  updatedAt: 2025-01-21T06:46:09.606Z,
+  __v: 3
+} || task_status: { currentStatus: 'To Do', history: [] }
+<2025-01-21T07:10:53.158Z> || Tag: Added Dependency || task_id: 678ded6e80cbfb55ce4d02f7 || task_title: complete the frontend of dashboard || task_description: complete the frontend before EOD and submit to dheeraj || task_assignedUsers: 678b47874bc3ddd8cfcc1c4d || task_status: {
+  currentStatus: 'In Progress',
+  history: [
+    {
+      status: 'To Do',
+      changedAt: 2025-01-21T05:43:49.703Z,
+      changedBy: new ObjectId('678a6138034fe20b4406dbe8'),
+      _id: new ObjectId('678f34157cd09f1d8a01ef9b')
+    }
+  ]
+} 
+<2025-01-21T07:20:22.143Z> || Tag: Added Dependency || task_id: 678ded6e80cbfb55ce4d02f7 || task_title: complete the frontend of dashboard || task_description: complete the frontend before EOD and submit to dheeraj || task_assignedUsers: 678b47874bc3ddd8cfcc1c4d || task_status: {
+  currentStatus: 'In Progress',
+  history: [
+    {
+      status: 'To Do',
+      changedAt: 2025-01-21T05:43:49.703Z,
+      changedBy: new ObjectId('678a6138034fe20b4406dbe8'),
+      _id: new ObjectId('678f34157cd09f1d8a01ef9b')
+    }
+  ]
+} 
+<2025-01-21T07:28:16.832Z> || Tag: Added Dependency || task_id: 678ded6e80cbfb55ce4d02f7 || task_title: complete the frontend of dashboard || task_description: complete the frontend before EOD and submit to dheeraj || task_assignedUsers: 678b47874bc3ddd8cfcc1c4d || task_status: {
+  currentStatus: 'In Progress',
+  history: [
+    {
+      status: 'To Do',
+      changedAt: 2025-01-21T05:43:49.703Z,
+      changedBy: new ObjectId('678a6138034fe20b4406dbe8'),
+      _id: new ObjectId('678f34157cd09f1d8a01ef9b')
+    }
+  ]
+} 
+<2025-01-21T07:29:42.364Z> || Tag: Added Dependency || task_id: 678ded6e80cbfb55ce4d02f7 || task_title: complete the frontend of dashboard || task_description: complete the frontend before EOD and submit to dheeraj || task_assignedUsers: 678b47874bc3ddd8cfcc1c4d || task_status: {
+  currentStatus: 'In Progress',
+  history: [
+    {
+      status: 'To Do',
+      changedAt: 2025-01-21T05:43:49.703Z,
+      changedBy: new ObjectId('678a6138034fe20b4406dbe8'),
+      _id: new ObjectId('678f34157cd09f1d8a01ef9b')
+    }
+  ]
+} 
+<2025-01-21T07:32:24.406Z> || Tag: Added Dependency || task_id: 678ded6e80cbfb55ce4d02f7 || task_title: complete the frontend of dashboard || task_description: complete the frontend before EOD and submit to dheeraj || task_assignedUsers: 678b47874bc3ddd8cfcc1c4d || task_status: {
+  currentStatus: 'In Progress',
+  history: [
+    {
+      status: 'To Do',
+      changedAt: 2025-01-21T05:43:49.703Z,
+      changedBy: new ObjectId('678a6138034fe20b4406dbe8'),
+      _id: new ObjectId('678f34157cd09f1d8a01ef9b')
+    }
+  ]
+} 
