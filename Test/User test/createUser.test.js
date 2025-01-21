@@ -2,23 +2,23 @@ const { ServerConfiguration } = require('../config.jest');
 
 // Mock user data
 let userData = {
-	name: 'testuser3',
+	name: 'testuser6',
 	password: '123456789',
-	email: 'testuser3@gmail.com',
-	role: 'team_member',
+	email: 'testuser6@gmail.com',
+	role: 'team_lead',
 	status: 'active',
 };
 
-// describe('User API: Create User', () => {
-// 	let server = ServerConfiguration();
+describe('User API: Create User', () => {
+	let server = ServerConfiguration();
 
-// 	it('should create a new user', async () => {
-// 		const response = await server.post('/api/users/create').send(userData);
+	it('should create a new user', async () => {
+		const response = await server.post('/api/users/create').send(userData);
 
-// 		expect(response.status).toBe(200);
-// 		expect(response.body.message).toBe('User created successfully');
-// 	});
-// });
+		expect(response.status).toBe(200);
+		expect(response.body.message).toBe('User created successfully');
+	});
+});
 
 describe('Create User: If User Already Exists', () => {
 	let server;
