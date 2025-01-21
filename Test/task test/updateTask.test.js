@@ -1,5 +1,5 @@
 const { ServerConfiguration } = require('../config.jest.js');
-const jwt = require('jsonwebtoken');
+const TestJwtPayload = require('../testJwtPayload/testJwtPayload.js');
 
 // Task data for the mutation
 const taskData = {
@@ -33,24 +33,17 @@ const mutation = `
 
 describe('Update Task', () => {
 	let server;
+	let testJwtPayload;
 
 	// Initialize the server before running tests
 	beforeAll(() => {
 		server = ServerConfiguration();
+		testJwtPayload = new TestJwtPayload();
 	});
 
 	it('should update a task as admin with JWT token and RBAC', async () => {
 		// Generate JWT token
-		const token = jwt.sign(
-			{
-				_id: '678a60e0034fe20b4406dbe4', // Example user ID
-				name: 'test',
-				role: 'admin',
-				email: 'test1@gmail.com',
-			},
-			process.env.ACCESS_TOKEN_SECRET,
-			{ expiresIn: '1d' }
-		);
+		const token = testJwtPayload.adminPayload();
 
 		const response = await server
 			.post('/graphql')
@@ -69,5 +62,65 @@ describe('Update Task', () => {
 			title: taskData.input.title,
 			description: taskData.input.description,
 		});
+	});
+
+	it('should update a task as Project_Manager with JWT token and RBAC', async () => {
+		const token = testJwtPayload.projectManagerPayload();
+
+		const response = await server
+			.post('/graphql')
+			.send({
+				query: mutation,
+				variables: taskData,
+			})
+			.set('Authorization', `Bearer ${token}`);
+
+		console.log('Response:', response.body);
+
+		expect(response.status).toBe(200);
+		expect(response.body).toHaveProperty('data.updateTask');
+		expect(response.body.data.updateTask).toMatchObject({
+			id: taskData.updateTaskId,
+			title: taskData.input.title,
+			description: taskData.input.description,
+		});
+	});
+
+	it('should update a task as team_lead with JWT token and RBAC', async () => {
+		const token = testJwtPayload.teamLeadPayload();
+
+		const response = await server
+			.post('/graphql')
+			.send({
+				query: mutation,
+				variables: taskData,
+			})
+			.set('Authorization', `Bearer ${token}`);
+
+		console.log('Response:', response.body);
+
+		expect(response.status).toBe(200);
+		expect(response.body.errors[0].message).toBe(
+			'Forbidden: You do not have permission to access updateTask route'
+		);
+	});
+
+	it('should update a task as Project_Manager with JWT token and RBAC', async () => {
+		const token = testJwtPayload.teamMemberPayload();
+
+		const response = await server
+			.post('/graphql')
+			.send({
+				query: mutation,
+				variables: taskData,
+			})
+			.set('Authorization', `Bearer ${token}`);
+
+		console.log('Response:', response.body);
+
+		expect(response.status).toBe(200);
+		expect(response.body.errors[0].message).toBe(
+			'Forbidden: You do not have permission to access updateTask route'
+		);
 	});
 });
