@@ -183,7 +183,6 @@ export const taskResolvers = {
 					throw new ApiError(404, 'Task not found');
 				}
 
-				// Sanitize and update fields
 				if (input.title) task.title = sanitizeHtml(input.title.trim());
 				if (input.description)
 					task.description = sanitizeHtml(input.description.trim());
@@ -249,7 +248,7 @@ export const taskResolvers = {
 				task.status.history.unshift({
 					status: task.status.currentStatus,
 					changedAt: new Date(),
-					changedBy: currentUser,
+					changedBy: context.user,
 				});
 				task.status.currentStatus = status;
 				await task.save();
@@ -303,15 +302,29 @@ export const taskResolvers = {
 					throw new ApiError(404, 'Task not found');
 				}
 
-				userIds?.forEach(async (user) => {
-					const newUser = await User.findById(user);
-					if (newUser) {
-						newUser.assignedTasks.push(task._id.toString());
-						await newUser.save();
-					}
-					task.assignedUsers.push(newUser);
-				});
+				const assignedUserIds = task.assignedUsers.map((user) =>
+					user._id.toString()
+				);
 
+				userIds.forEach((userId) => {
+					if (assignedUserIds.includes(userId)) {
+						console.log('userId: ', userId);
+						throw new ApiError(
+							400,
+							'User already assigned to the task'
+						);
+					}
+				});
+				await Promise.all(
+					userIds?.map(async (user) => {
+						const newUser = await User.findById(user);
+						if (newUser) {
+							newUser.assignedTasks.push(task._id.toString());
+							await newUser.save();
+						}
+						task.assignedUsers.push(newUser);
+					})
+				);
 				await task.save();
 				logAudit(
 					`Tag: Assigned Task || task_id: ${task._id} || task_title: ${task.title} || task_description: ${task.description} || task_assignedUsers: ${task.assignedUsers} || task_status: ${task.status}`
@@ -337,22 +350,21 @@ export const taskResolvers = {
 					throw new ApiError(404, 'Task not found');
 				}
 
-				const dependencyTask = await Task.findById(dependencyTaskId);
-				if (!dependencyTask) {
-					throw new ApiError(404, 'Dependency task not found');
-				}
-
 				if (task.dependencies.includes(dependencyTaskId)) {
 					throw new ApiError(
 						400,
 						'This dependency is already added to the task'
 					);
 				}
-				if (dependencyTask.dependencies.includes(id)) {
+				if (task._id.toString() === dependencyTaskId) {
 					throw new ApiError(
 						400,
 						'Circular dependency detected: A task cannot depend on itself'
 					);
+				}
+				const dependencyTask = await Task.findById(dependencyTaskId);
+				if (!dependencyTask) {
+					throw new ApiError(404, 'Dependency task not found');
 				}
 
 				task.dependencies.push(dependencyTaskId);

@@ -16,7 +16,7 @@ export const taskTypeDefs = `#graphql
     parentTaskId: Task
     status: TaskStatus!
     assignedUsers: [User!]
-    dependencies: [ID!]
+    dependencies: [Task!]
     createdAt: String!
     updatedAt: String!
     versioning: TaskVersioning!
