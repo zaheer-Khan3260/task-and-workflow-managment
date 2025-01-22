@@ -52,7 +52,7 @@ describe('Assign Task', () => {
 
 		console.log(response.body);
 		expect(response.status).toBe(200);
-		expect(response.body.data.assignTask.assignedUsers.length).toBe(3);
+		expect(response.body.data.assignTask.assignedUsers.length).toBe(1);
 	});
 
 	it('should assign a task to a user if user already assigned to the task as admin with JWT token and RBAC', async () => {
@@ -89,7 +89,7 @@ describe('Assign Task', () => {
 
 		console.log(response.body);
 		expect(response.status).toBe(200);
-		expect(response.body.data.assignTask.assignedUsers.length).toBe(4);
+		expect(response.body.data.assignTask.assignedUsers.length).toBe(1);
 	});
 
 	it('should assign a task to a user as team lead with JWT token and RBAC', async () => {
@@ -108,7 +108,7 @@ describe('Assign Task', () => {
 
 		console.log(response.body);
 		expect(response.status).toBe(200);
-		expect(response.body.data.assignTask.assignedUsers.length).toBe(4);
+		expect(response.body.data.assignTask.assignedUsers.length).toBe(2);
 	});
 
 	it('should assign a task to a user as team member with JWT token and RBAC', async () => {

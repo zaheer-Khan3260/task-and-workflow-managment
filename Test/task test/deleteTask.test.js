@@ -11,7 +11,7 @@ const mutation = `
 `;
 
 const taskData = {
-	deleteTaskId: '678e4580012f5560a915e2ba',
+	deleteTaskId: '67908da00f6160344ac678a4',
 };
 
 describe('Delete Task', () => {
@@ -23,19 +23,19 @@ describe('Delete Task', () => {
 		testJwtPayload = new TestJwtPayload();
 	});
 
-	// it('should delete a task if exists as admin with JWT token and RBAC', async () => {
-	// 	const token = testJwtPayload.adminPayload();
+	it('should delete a task if exists as admin with JWT token and RBAC', async () => {
+		const token = testJwtPayload.adminPayload();
 
-	// 	const response = await server
-	// 		.post('/graphql')
-	// 		.send({
-	// 			query: mutation,
-	// 			variables: taskData,
-	// 		})
-	// 		.set('Authorization', `Bearer ${token}`);
-	// 	expect(response.status).toBe(200);
-	// 	expect(response.body.data.deleteTask.success).toBe(true);
-	// });
+		const response = await server
+			.post('/graphql')
+			.send({
+				query: mutation,
+				variables: taskData,
+			})
+			.set('Authorization', `Bearer ${token}`);
+		expect(response.status).toBe(200);
+		expect(response.body.data.deleteTask.success).toBe(true);
+	});
 
 	it('should delete a task if not exists as admin with JWT token and RBAC', async () => {
 		const token = testJwtPayload.adminPayload();

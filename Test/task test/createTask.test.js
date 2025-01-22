@@ -1,6 +1,5 @@
 const { ServerConfiguration } = require('../config.jest');
-const jwt = require('jsonwebtoken');
-
+const TestJwtPayload = require('../testJwtPayload/testJwtPayload.js');
 // Task data
 const taskData = {
 	title: 'Test Task',
@@ -38,22 +37,14 @@ const mutation = `
 
 describe('Create Task', () => {
 	let server;
-
+	let testJwtPayload;
 	beforeAll(() => {
 		server = ServerConfiguration();
+		testJwtPayload = new TestJwtPayload();
 	});
 
 	it('should create a task as admin with JWT token and RBAC', async () => {
-		let token = jwt.sign(
-			{
-				_id: '678a60e0034fe20b4406dbe4',
-				name: 'test',
-				role: 'admin',
-				email: 'test1@gmail.com',
-			},
-			process.env.ACCESS_TOKEN_SECRET,
-			{ expiresIn: '1d' }
-		);
+		const token = testJwtPayload.adminPayload();
 
 		const response = await server
 			.post('/graphql')
@@ -71,16 +62,7 @@ describe('Create Task', () => {
 	});
 
 	it('should create a task as Project Manager with JWT token and RBAC', async () => {
-		let token = jwt.sign(
-			{
-				_id: '678b5b872d3db633dd08bd48',
-				name: 'test',
-				role: 'project_manager',
-				email: 'test6@gmail.com',
-			},
-			process.env.ACCESS_TOKEN_SECRET,
-			{ expiresIn: '1d' }
-		);
+		const token = testJwtPayload.projectManagerPayload();
 
 		const response = await server
 			.post('/graphql')
@@ -98,16 +80,7 @@ describe('Create Task', () => {
 	});
 
 	it('should not able to create a task as Team Lead with JWT token and RBAC', async () => {
-		let token = jwt.sign(
-			{
-				_id: '678a6138034fe20b4406dbe8',
-				name: 'test',
-				role: 'team_leader',
-				email: 'test2@gmail.com',
-			},
-			process.env.ACCESS_TOKEN_SECRET,
-			{ expiresIn: '1d' }
-		);
+		const token = testJwtPayload.teamLeadPayload();
 
 		const response = await server
 			.post('/graphql')
@@ -124,16 +97,7 @@ describe('Create Task', () => {
 	});
 
 	it('should not able to create a task as Team Member with JWT token and RBAC', async () => {
-		let token = jwt.sign(
-			{
-				_id: '678b47874bc3ddd8cfcc1c4d',
-				name: 'test',
-				role: 'team_member',
-				email: 'test4@gmail.com',
-			},
-			process.env.ACCESS_TOKEN_SECRET,
-			{ expiresIn: '1d' }
-		);
+		const token = testJwtPayload.teamMemberPayload();
 
 		const response = await server
 			.post('/graphql')
