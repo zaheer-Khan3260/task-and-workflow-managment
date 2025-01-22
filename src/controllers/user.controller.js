@@ -45,3 +45,14 @@ export const getAllUsers = asyncHandler(async (req, res, next) => {
 		console.log(error);
 	}
 });
+
+export const getRankedOfTeamMemberAndTeamLead = asyncHandler(
+	async (req, res, next) => {
+		const { role } = req.params;
+
+		const users = await userService.getRankedOfTeamMemberAndTeamLead(role);
+		res.status(200).json(
+			new ApiResponse(200, users, 'Ranked users fetched successfully')
+		);
+	}
+);
