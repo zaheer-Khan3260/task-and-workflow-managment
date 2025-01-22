@@ -1,11 +1,11 @@
 export const taskTypeDefs = `#graphql
 
     type User {
-        id: ID!
+        _id: ID
         name: String
         email: String
         role: String
-       
+        assignedTasks: [Task!]
         status: String
     }
     
@@ -59,6 +59,24 @@ type DeleteTaskResponse {
   
 type Query {
     tasks: [Task!]!
+    getUserBasedOnStatus(
+        status: String!,
+        year: Int!,
+        month: Int,
+        day: Int,
+        action: String!,
+        role: String
+    ): User!
+
+    getDayOrMonthWithMostTasksCreated(
+        action: String!
+    ): String!
+
+    getDayOrMonthWithMostTasksCompleted(
+        action: String!
+        role: String
+    ): String!
+
 }
 
 type createTaskResponse {
