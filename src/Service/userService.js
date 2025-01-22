@@ -3,6 +3,7 @@ import { ApiError } from '../utils/ApiError.js';
 
 import { generateAccessAndRefereshTokens } from '../dependencies/generateAccessAndRefreshToken.js';
 import { logAudit } from '../utils/auditLogger.js';
+import { taskResolvers } from '../graphql/resolvers/taskResolver.js';
 
 class UserService {
 	createUser = async (userData) => {
@@ -73,6 +74,49 @@ class UserService {
 		logAudit(`Tag: Fetched Users || user_count: ${users.length}`);
 
 		return users;
+	};
+
+	getRankedOfTeamMemberAndTeamLead = async (role) => {
+		if (role !== 'team_member' && role !== 'team_lead') {
+			throw new ApiError(400, 'Invalid role');
+		}
+
+		const pipeline = [
+			{ $match: { role: role } },
+			{
+				$lookup: {
+					from: 'tasks',
+					localField: 'assignedTasks',
+					foreignField: '_id',
+					as: 'taskDetails',
+				},
+			},
+		];
+
+		const users = await User.aggregate(pipeline);
+		let rankeHashMap = {};
+
+		for (const user of users) {
+			let points = 0;
+			if (user.taskDetails.length > 0) {
+				user.taskDetails.forEach((task) => {
+					if (task.status.currentStatus === 'Done') {
+						points += 3;
+					} else if (task.status.currentStatus === 'In Progress') {
+						points += 2;
+					} else if (task.status.currentStatus === 'To Do') {
+						points += 1;
+					}
+				});
+			}
+			rankeHashMap[user._id] = { user, points };
+		}
+
+		const rankedUsers = Object.values(rankeHashMap)
+			.sort((a, b) => b.points - a.points)
+			.map((item) => item.user);
+
+		return rankedUsers;
 	};
 }
 
