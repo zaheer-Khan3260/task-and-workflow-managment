@@ -882,3 +882,140 @@
     }
   ]
 } 
+<2025-01-21T13:07:19.521Z> || Tag: User logged in || user_id: 678e1b79860d7c8497200970 || user_name: testuser1 || role: admin
+<2025-01-21T13:09:13.653Z> || Tag: User logged in || user_id: 678e1b79860d7c8497200970 || user_name: testuser1 || role: admin
+<2025-01-21T13:09:56.684Z> || Tag: User logged in || user_id: 678e1b79860d7c8497200970 || user_name: testuser1 || role: admin
+<2025-01-21T13:11:23.294Z> || Tag: User logged in || user_id: 678e1b79860d7c8497200970 || user_name: testuser1 || role: admin
+<2025-01-21T13:11:44.988Z> || Tag: User logged in || user_id: 678e1b79860d7c8497200970 || user_name: testuser1 || role: admin
+<2025-01-21T13:11:58.444Z> || Tag: User logged in || user_id: 678e1b79860d7c8497200970 || user_name: testuser1 || role: admin
+<2025-01-21T13:13:26.002Z> || Tag: User logged in || user_id: 678e1b79860d7c8497200970 || user_name: testuser1 || role: admin
+<2025-01-21T13:18:49.344Z> || Tag: User logged in || user_id: 678e1b79860d7c8497200970 || user_name: testuser1 || role: admin
+<2025-01-21T13:19:39.830Z> || Tag: User logged in || user_id: 678e1b79860d7c8497200970 || user_name: testuser1 || role: admin
+<2025-01-21T13:21:44.132Z> || Tag: User created || user_id: 678f9f68ad1bf5177ace1db9 || user_name: testuser6 || role: team_lead
+<2025-01-21T13:22:25.022Z> || Tag: Fetched Users || user_count: 10
+<2025-01-22T05:40:09.377Z> || Tag: Fetched Tasks || Fetched by: test user_id: 678a60e0034fe20b4406dbe4 || task_count: 7
+<2025-01-22T05:40:09.835Z> || Tag: Fetched Tasks || Fetched by: test user_id: 678b5b872d3db633dd08bd48 || task_count: 7
+<2025-01-22T05:40:10.097Z> || Tag: Fetched Tasks || Fetched by: test user_id: 678a6138034fe20b4406dbe8 || task_count: 7
+<2025-01-22T05:40:10.365Z> || Tag: Fetched Tasks || Fetched by: test user_id: 678b46d1213f9efb4fa4ed40 || task_count: 2
+<2025-01-22T05:53:37.083Z> || Tag: Fetched Tasks || Fetched by: test user_id: 678a60e0034fe20b4406dbe4 || task_count: 7
+<2025-01-22T05:53:37.464Z> || Tag: Fetched Tasks || Fetched by: test user_id: 678b5b872d3db633dd08bd48 || task_count: 7
+<2025-01-22T05:53:37.689Z> || Tag: Fetched Tasks || Fetched by: test user_id: 678a6138034fe20b4406dbe8 || task_count: 7
+<2025-01-22T05:53:37.907Z> || Tag: Fetched Tasks || Fetched by: test user_id: 678b46d1213f9efb4fa4ed40 || task_count: 2
+<2025-01-22T06:08:42.286Z> || Tag: Fetched Tasks || Fetched by: test user_id: 678a60e0034fe20b4406dbe4 || task_count: 7
+<2025-01-22T06:08:42.733Z> || Tag: Fetched Tasks || Fetched by: test user_id: 678b5b872d3db633dd08bd48 || task_count: 7
+<2025-01-22T06:08:42.987Z> || Tag: Fetched Tasks || Fetched by: test user_id: 678a6138034fe20b4406dbe8 || task_count: 7
+<2025-01-22T06:08:43.235Z> || Tag: Fetched Tasks || Fetched by: test user_id: 678b46d1213f9efb4fa4ed40 || task_count: 2
+<2025-01-22T06:18:08.347Z> || Tag: Task created || task_id: 67908da00f6160344ac678a4 || task_title: Test Task || task_description: This is a test task || task_assignedUsers: 678b47d17ba85b8d3dc301f3|| task_status: { currentStatus: 'To Do', history: [] }
+<2025-01-22T06:18:08.511Z> || Tag: Task created || task_id: 67908da00f6160344ac678aa || task_title: Test Task || task_description: This is a test task || task_assignedUsers: 678b47d17ba85b8d3dc301f3|| task_status: { currentStatus: 'To Do', history: [] }
+<2025-01-22T06:36:18.472Z> || Tag: Task updated || task_id: 678e46a0a9b0951fa4ee0d60 || task_title: Updated Test Task || task_description: This is an updated test task || task_assignedUsers: 678b47d17ba85b8d3dc301f3,678e235d9edd5ace32f49096,678e1c7f04076800f7357997 || task_status: { currentStatus: 'To Do', history: [] }
+<2025-01-22T06:36:18.578Z> || Tag: Task updated || task_id: 678e46a0a9b0951fa4ee0d60 || task_title: Updated Test Task || task_description: This is an updated test task || task_assignedUsers: 678b47d17ba85b8d3dc301f3,678e235d9edd5ace32f49096,678e1c7f04076800f7357997 || task_status: { currentStatus: 'To Do', history: [] }
+<2025-01-22T06:37:23.923Z> || Tag: Deleted Task || task_id: 67908da00f6160344ac678aa || task_title: Test Task ||task_description: This is a test task || task_assignedUsers: 678b47d17ba85b8d3dc301f3 || task_status: { currentStatus: 'To Do', history: [] }
+<2025-01-22T06:53:01.793Z> || Tag: Updated Task Status || task_id: 678b531732c2c9ab26b37181 || task_title: complete the payment gatway integration || task_description: intergrat the razorpay payment gatway in the backend so user can make payment and take a subscription of our product || task_assignedUsers: 678b47874bc3ddd8cfcc1c4d || task_status: Done
+<2025-01-22T06:53:02.052Z> || Tag: Updated Task Status || task_id: 678b531732c2c9ab26b37181 || task_title: complete the payment gatway integration || task_description: intergrat the razorpay payment gatway in the backend so user can make payment and take a subscription of our product || task_assignedUsers: 678b47874bc3ddd8cfcc1c4d || task_status: In Progress
+<2025-01-22T06:57:08.225Z> || Tag: Assigned Task || task_id: 678e46a0a9b0951fa4ee0d60 || task_title: Updated Test Task || task_description: This is an updated test task || task_assignedUsers: {
+  name: 'test',
+  email: 'test1@gmail.com',
+  password: '$2b$10$yhgiuX2kRSI0.dIAOOMuY.ZTsj1fca3fecydcWznPXT.D4mxG9Kvi',
+  role: 'admin',
+  assignedTasks: [
+    new ObjectId('678e46a0a9b0951fa4ee0d60'),
+    new ObjectId('678e46a0a9b0951fa4ee0d60'),
+    new ObjectId('678e46a0a9b0951fa4ee0d60'),
+    new ObjectId('678e46a0a9b0951fa4ee0d60')
+  ],
+  refreshToken: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzhhNjBlMDAzNGZlMjBiNDQwNmRiZTQiLCJpYXQiOjE3MzczNzQxMzIsImV4cCI6MTczODIzODEzMn0.ZnapSTXJ3XWQOVEM5ZBVE1f7zd858qADjM8gVp4UgfY',
+  status: 'active',
+  _id: new ObjectId('678a60e0034fe20b4406dbe4'),
+  createdAt: 2025-01-17T13:53:36.131Z,
+  updatedAt: 2025-01-22T06:57:08.157Z,
+  __v: 4
+} || task_status: { currentStatus: 'To Do', history: [] }
+<2025-01-22T06:57:08.507Z> || Tag: Assigned Task || task_id: 678dfb9213f574d435d61a31 || task_title: complete the frontend of Authentication page || task_description: complete the frontend before EOD and submit to dheeraj || task_assignedUsers: {
+  name: 'test',
+  email: 'test5@gmail.com',
+  password: '$2b$10$Ky1jb06QZaaEnZlNpXJN5u68SNvuGOH/qMDCGOEScd0UbZ/qbLucu',
+  role: 'team_member',
+  assignedTasks: [
+    new ObjectId('678b56a3ff4f1ad14bcd2cc6'),
+    new ObjectId('678dfb9213f574d435d61a31')
+  ],
+  status: 'active',
+  _id: new ObjectId('678b47d17ba85b8d3dc301f3'),
+  createdAt: 2025-01-18T06:18:57.849Z,
+  updatedAt: 2025-01-22T06:57:08.449Z,
+  __v: 2
+} || task_status: { currentStatus: 'To Do', history: [] }
+<2025-01-22T06:57:08.703Z> || Tag: Assigned Task || task_id: 678dfb9213f574d435d61a31 || task_title: complete the frontend of Authentication page || task_description: complete the frontend before EOD and submit to dheeraj || task_assignedUsers: {
+  _id: new ObjectId('678b47d17ba85b8d3dc301f3'),
+  name: 'test',
+  email: 'test5@gmail.com',
+  password: '$2b$10$Ky1jb06QZaaEnZlNpXJN5u68SNvuGOH/qMDCGOEScd0UbZ/qbLucu',
+  role: 'team_member',
+  assignedTasks: [
+    new ObjectId('678b56a3ff4f1ad14bcd2cc6'),
+    new ObjectId('678dfb9213f574d435d61a31')
+  ],
+  status: 'active',
+  createdAt: 2025-01-18T06:18:57.849Z,
+  updatedAt: 2025-01-22T06:57:08.449Z,
+  __v: 2
+},{
+  name: 'testuser2',
+  email: 'testuser2@gmail.com',
+  password: '$2b$10$8dw6E8xrLA8Uu07ONdGD8.DrfR.qQcfybgZ5fwE8UuxZSszP7GzH6',
+  role: 'team_member',
+  assignedTasks: [
+    new ObjectId('678e46a0a9b0951fa4ee0d60'),
+    new ObjectId('678e46a0a9b0951fa4ee0d60'),
+    new ObjectId('678e46a0a9b0951fa4ee0d60'),
+    new ObjectId('678e46a0a9b0951fa4ee0d60'),
+    new ObjectId('678e46a0a9b0951fa4ee0d60'),
+    new ObjectId('678dfb9213f574d435d61a31')
+  ],
+  status: 'active',
+  _id: new ObjectId('678e1c7f04076800f7357997'),
+  createdAt: 2025-01-20T09:50:55.033Z,
+  updatedAt: 2025-01-22T06:57:08.643Z,
+  __v: 6
+} || task_status: { currentStatus: 'To Do', history: [] }
+<2025-01-22T06:59:55.811Z> || Tag: Added Dependency || task_id: 678ded6e80cbfb55ce4d02f7 || task_title: complete the frontend of dashboard || task_description: complete the frontend before EOD and submit to dheeraj || task_assignedUsers: 678b47874bc3ddd8cfcc1c4d || task_status: {
+  currentStatus: 'In Progress',
+  history: [
+    {
+      status: 'To Do',
+      changedAt: 2025-01-21T05:43:49.703Z,
+      changedBy: new ObjectId('678a6138034fe20b4406dbe8'),
+      _id: new ObjectId('678f34157cd09f1d8a01ef9b')
+    }
+  ]
+} 
+<2025-01-22T06:59:56.090Z> || Tag: Added Dependency || task_id: 678ded6e80cbfb55ce4d02f7 || task_title: complete the frontend of dashboard || task_description: complete the frontend before EOD and submit to dheeraj || task_assignedUsers: 678b47874bc3ddd8cfcc1c4d || task_status: {
+  currentStatus: 'In Progress',
+  history: [
+    {
+      status: 'To Do',
+      changedAt: 2025-01-21T05:43:49.703Z,
+      changedBy: new ObjectId('678a6138034fe20b4406dbe8'),
+      _id: new ObjectId('678f34157cd09f1d8a01ef9b')
+    }
+  ]
+} 
+<2025-01-22T06:59:56.234Z> || Tag: Added Dependency || task_id: 678ded6e80cbfb55ce4d02f7 || task_title: complete the frontend of dashboard || task_description: complete the frontend before EOD and submit to dheeraj || task_assignedUsers: 678b47874bc3ddd8cfcc1c4d || task_status: {
+  currentStatus: 'In Progress',
+  history: [
+    {
+      status: 'To Do',
+      changedAt: 2025-01-21T05:43:49.703Z,
+      changedBy: new ObjectId('678a6138034fe20b4406dbe8'),
+      _id: new ObjectId('678f34157cd09f1d8a01ef9b')
+    }
+  ]
+} 
+<2025-01-22T07:37:46.553Z> || Tag: User logged in || user_id: 678a60e0034fe20b4406dbe4 || user_name: test || role: admin
+<2025-01-22T08:05:30.992Z> || Tag: User logged in || user_id: 678a60e0034fe20b4406dbe4 || user_name: test || role: admin
+<2025-01-23T05:06:17.584Z> || Tag: Task created || task_id: 6791ce49c9c27b87727cece8 || task_title: Test Task || task_description: This is a test task || task_assignedUsers: 678b47d17ba85b8d3dc301f3|| task_status: { currentStatus: 'To Do', history: [] }
+<2025-01-23T05:06:17.729Z> || Tag: Task created || task_id: 6791ce49c9c27b87727cecee || task_title: Test Task || task_description: This is a test task || task_assignedUsers: 678b47d17ba85b8d3dc301f3|| task_status: { currentStatus: 'To Do', history: [] }
+<2025-01-23T05:06:35.017Z> || Tag: Task created || task_id: 6791ce5ac9c27b87727cecf6 || task_title: Test Task || task_description: This is a test task || task_assignedUsers: 678b47d17ba85b8d3dc301f3|| task_status: { currentStatus: 'To Do', history: [] }
+<2025-01-23T05:06:35.154Z> || Tag: Task created || task_id: 6791ce5bc9c27b87727cecfc || task_title: Test Task || task_description: This is a test task || task_assignedUsers: 678b47d17ba85b8d3dc301f3|| task_status: { currentStatus: 'To Do', history: [] }
+<2025-01-23T05:06:37.405Z> || Tag: Task created || task_id: 6791ce5dc9c27b87727ced04 || task_title: Test Task || task_description: This is a test task || task_assignedUsers: 678b47d17ba85b8d3dc301f3|| task_status: { currentStatus: 'To Do', history: [] }
+<2025-01-23T05:06:37.540Z> || Tag: Task created || task_id: 6791ce5dc9c27b87727ced0a || task_title: Test Task || task_description: This is a test task || task_assignedUsers: 678b47d17ba85b8d3dc301f3|| task_status: { currentStatus: 'To Do', history: [] }
