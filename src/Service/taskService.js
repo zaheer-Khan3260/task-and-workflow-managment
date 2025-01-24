@@ -285,8 +285,6 @@ class taskServices {
 		const { role, status, year, month, day, action } = data;
 		let aggregationData = [];
 
-		aggregationData.push({ $match: { 'status.currentStatus': status } });
-
 		if (year || month || day) {
 			const dateMatch = {};
 			if (year) {
@@ -306,6 +304,7 @@ class taskServices {
 			}
 			aggregationData.push({ $match: dateMatch });
 		}
+		aggregationData.push({ $match: { 'status.currentStatus': status } });
 
 		aggregationData.push({
 			$group: {
