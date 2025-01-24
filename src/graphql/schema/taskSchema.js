@@ -56,28 +56,7 @@ type DeleteTaskResponse {
     success: Boolean!
     id: ID!
 }
-  
-type Query {
-    tasks: [Task!]!
-    getUserBasedOnStatus(
-        status: String!,
-        year: Int!,
-        month: Int,
-        day: Int,
-        action: String!,
-        role: String
-    ): User!
 
-    getDayOrMonthWithMostTasksCreated(
-        action: String!
-    ): String!
-
-    getDayOrMonthWithMostTasksCompleted(
-        action: String!
-        role: String
-    ): String!
-
-}
 
 type createTaskResponse {
     id: ID!
@@ -91,6 +70,33 @@ type createTaskResponse {
     updatedAt: String!
     versioning: TaskVersioning!
     dueDate: String!
+}
+
+enum Action {
+    day
+    month
+}
+
+type Query {
+    tasks: [Task!]!
+    getUserBasedOnStatus(
+        status: String!,
+        year: Int!,
+        month: Int,
+        day: Int,
+        action: String!,
+        role: String
+    ): User!
+
+    getDayOrMonthWithMostTasksCreated(
+        action: Action!
+    ): String!
+
+    getDayOrMonthWithMostTasksCompleted(
+        action: Action!
+        role: String
+    ): String!
+
 }
 type Mutation {
     createTask(
